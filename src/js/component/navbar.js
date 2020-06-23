@@ -18,6 +18,9 @@ export const Navbar = () => {
 						<button>Live Video</button>
 						<button>Settings</button>
 						<button>History</button>
+						<Link className="btn btn-primary" to="/login">
+							LogIn
+						</Link>
 					</div>
 				) : null}
 			</div>
