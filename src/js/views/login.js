@@ -1,9 +1,9 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import LoginBG from "../../img/LoginBG.jpg";
 import "../../styles/CustomLogin.scss";
 
 export const Login = () => (
-	<>
+	<div src={LoginBG}>
 		<div className="d-flex justify-content-center h-100">
 			<div className="card">
 				<div className="card-header">
@@ -58,5 +58,5 @@ export const Login = () => (
 				</div>
 			</div>
 		</div>
-	</>
+	</div>
 );

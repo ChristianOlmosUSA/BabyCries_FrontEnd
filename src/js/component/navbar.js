@@ -15,6 +15,9 @@ export const Navbar = () => {
 				</button>
 				{dropDown ? (
 					<div className="d-flex flex-column h-100">
+						<Link className="btn btn-primary" to="./">
+							Home
+						</Link>
 						<button>Live Video</button>
 						<button>Settings</button>
 						<button>History</button>

@@ -2,9 +2,9 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 
-export const Home = () => (
+export const Video = () => (
 	<div className="text-center mt-5">
-		<h1>Home Page</h1>
+		<h1>Live Vidio Here!</h1>
 		<p>
 			<img src={rigoImage} />
 		</p>
