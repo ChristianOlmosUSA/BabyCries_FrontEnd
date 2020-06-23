@@ -13,15 +13,14 @@ export const Navbar = () => {
 				<button className="btn btn-primary" onClick={toggleUpOrDrop}>
 					Menu
 				</button>
+				{dropDown ? (
+					<div className="d-flex flex-column h-100">
+						<button>Live Video</button>
+						<button>Settings</button>
+						<button>History</button>
+					</div>
+				) : null}
 			</div>
-
-			{dropDown ? (
-				<div>
-					<button>Live Video</button>
-					<button>Settings</button>
-					<button>History</button>
-				</div>
-			) : null}
 		</nav>
 	);
 };
