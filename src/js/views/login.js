@@ -1,9 +1,9 @@
 import React from "react";
-import LoginBG from "../../img/LoginBG.jpg";
 import "../../styles/CustomLogin.scss";
+var LoginBG = require("../../img/LoginBG.jpg");
 
 export const Login = () => (
-	<div src={LoginBG}>
+	<div className="background-image h-auto w-auto" style={{ backgroundImage: "url(" + LoginBG + ")" }}>
 		<div className="d-flex justify-content-center h-100">
 			<div className="card">
 				<div className="card-header">
