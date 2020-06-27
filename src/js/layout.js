@@ -7,6 +7,7 @@ import { Login } from "./views/login";
 import { Video } from "./views/video";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Settings } from "./views/settings";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -28,6 +29,7 @@ export const Layout = () => {
 						<Route path="/demo" component={Demo} />
 						<Route path="/login" component={Login} />
 						<Route path="/video" component={Video} />
+						<Route path="/settings" component={Settings} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
