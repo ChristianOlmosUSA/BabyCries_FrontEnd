@@ -9,9 +9,9 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Settings } from "./views/settings";
 import { HistorySingleDay } from "./views/historySingleDay";
+import { HistoryList } from "./views/historyList";
 import { CreateNewAccount } from "./views/createNewAccount";
 import injectContext from "./store/appContext";
-
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -33,6 +33,7 @@ export const Layout = () => {
 						<Route path="/video" component={Video} />
 						<Route path="/settings" component={Settings} />
 						<Route path="/historysingleday" component={HistorySingleDay} />
+						<Route path="/historyList" component={HistoryList} />
 						<Route path="/createnewaccount" component={CreateNewAccount} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
