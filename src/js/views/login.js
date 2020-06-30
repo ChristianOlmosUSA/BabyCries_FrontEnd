@@ -3,7 +3,7 @@ import "../../styles/CustomLogin.scss";
 var LoginBG = require("../../img/LoginBG.jpg");
 
 export const Login = () => (
-	<div className="background-image h-auto w-auto" style={{ backgroundImage: "url(" + LoginBG + ")" }}>
+	<div className="background-image h-100 w-100">
 		<div className="d-flex justify-content-center h-100">
 			<div className="card">
 				<div className="card-header">
