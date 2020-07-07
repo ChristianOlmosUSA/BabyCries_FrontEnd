@@ -18,9 +18,15 @@ export const Navbar = () => {
 						<Link className="btn btn-primary" to="./">
 							Home
 						</Link>
-						<button>Live Video</button>
-						<button>Settings</button>
-						<button>History</button>
+						<Link className="btn btn-primary" to="/livevideo">
+							Live Video
+						</Link>
+						<Link className="btn btn-primary" to="/settings">
+							Settings
+						</Link>
+						<Link className="btn btn-primary" to="/history">
+							History
+						</Link>
 						<Link className="btn btn-primary" to="/login">
 							LogIn
 						</Link>
