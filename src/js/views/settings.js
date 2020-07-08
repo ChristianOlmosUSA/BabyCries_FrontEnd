@@ -17,7 +17,7 @@ export const Settings = () => (
 									<i className="fas fa-user" />
 								</span>
 							</div>
-							<input type="text" className="form-control" placeholder="babyname" />
+							<input type="text" className="form-control" placeholder="baby name" />
 						</div>
 						<div className="input-group form-group">
 							<div className="input-group-prepend">
