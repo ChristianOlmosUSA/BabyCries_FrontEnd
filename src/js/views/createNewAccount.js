@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/CustomLogin.scss"; // note we use the CustomLogin scss for these settings/reset/new account/login pages
 var LoginBG = require("../../img/LoginBG.jpg");
 
