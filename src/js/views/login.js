@@ -45,9 +45,9 @@ export const Login = () => (
 					<div className="d-flex justify-content-center">
 						<a href="#">Forgot your password?</a>
 					</div>
-
+					{/*	            do we really want social media icons on a secure login page for a baby!! I've commented out.
 					<div className="d-flex justify-content-end social_icon">
-						<span>
+					<span>
 							<i className="fab fa-facebook-square" />
 						</span>
 						<span>
@@ -55,8 +55,8 @@ export const Login = () => (
 						</span>
 						<span>
 							<i className="fab fa-twitter-square" />
-						</span>
-					</div>
+						</span> 
+					</div>*/}
 				</div>
 			</div>
 		</div>
