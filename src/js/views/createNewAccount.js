@@ -7,7 +7,8 @@ export const CreateNewAccount = () => (
 		<div className="d-flex justify-content-center h-100">
 			<div className="card">
 				<div className="card-header">
-					<h3>Settings</h3>
+					<h3>Create New Account</h3>{" "}
+					{/* in reality we should check for an existing account before erasing data */}
 				</div>
 				<div className="card-body">
 					<form>
