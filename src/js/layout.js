@@ -11,6 +11,7 @@ import { Settings } from "./views/settings";
 import { HistorySingleDay } from "./views/historySingleDay";
 import { HistoryList } from "./views/historyList";
 import { CreateNewAccount } from "./views/createNewAccount";
+import { Dashboard } from "./views/dashboard";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -30,6 +31,7 @@ export const Layout = () => {
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
 						<Route exact path="/login" component={Login} />
+						<Route exact path="/dashboard" component={Dashboard} />
 						<Route path="/video" component={Video} />
 						<Route path="/settings" component={Settings} />
 						<Route path="/historysingleday" component={HistorySingleDay} />
