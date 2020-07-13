@@ -29,7 +29,7 @@ export const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
-						<Route path="/login" component={Login} />
+						<Route exact path="/login" component={Login} />
 						<Route path="/video" component={Video} />
 						<Route path="/settings" component={Settings} />
 						<Route path="/historysingleday" component={HistorySingleDay} />
