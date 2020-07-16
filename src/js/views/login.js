@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "../../styles/CustomLogin.scss";
+import { Context } from "../store/appContext";
+import { Dashboard } from "./dashboard";
+import PropTypes from "prop-types";
 var LoginBG = require("../../img/LoginBG.jpg");
 
-export const Login = () => {
+export const Login = ({ history }) => {
+	const { actions, store } = useContext(Context);
 	const [password, setPassword] = React.useState("");
 	const [email, setEmail] = React.useState("");
-
 	const formHandler = event => {
 		//alert(event);
-		alert("email " + email + " password " + password);
+		//alert("email " + email + " password " + password);
+		actions.getToken(email, password);
 	};
+	if (store.token != null) {
+		history.push("/dashboard");
+	}
 
 	return (
 		<div className="background-image h-100 w-100">
@@ -86,4 +93,7 @@ export const Login = () => {
 			</div>
 		</div>
 	);
+};
+Login.propTypes = {
+	history: PropTypes.object
 };
