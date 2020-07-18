@@ -78,11 +78,12 @@ export const Settings = () => {
 						</div> */}
 							<div className="form-group">
 								<input
-									type="submit"
+									type="button"
 									value="Update"
 									className="btn float-right login_btn"
-									onSubmit={() => {
+									onClick={() => {
 										actions.updateSettings(babyName, dob, timeZone, gender);
+										console.log(babyName, dob, timeZone, gender);
 									}}
 								/>
 							</div>

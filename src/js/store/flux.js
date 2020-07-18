@@ -17,26 +17,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			updateSettings: (babyName, dob, timeZone, gender) => {
-				const data = {
-					babyName: babyName,
-					dob: dob,
-					timeZone: timeZone,
-					gender: gender
-				};
-				fetch("https://3000-f3c76e20-2de6-4ec7-9549-62591ce8be59.ws-us02.gitpod.io/login", {
-					method: "PUT", // or 'PUT'
-					headers: {
-						"Content-Type": "application/json"
-					},
-					body: JSON.stringify(data)
-				})
-					.then(response => response.json())
-					.then(data => {
-						console.log("Success:", data);
+				let store = getStore();
+				if (store.token != null) {
+					console.log("token found, token = " + store.token);
+					const data = {
+						babyName: babyName,
+						dob: dob,
+						timeZone: timeZone,
+						gender: gender
+					};
+					fetch("https://3000-f3c76e20-2de6-4ec7-9549-62591ce8be59.ws-us02.gitpod.io/login", {
+						method: "PUT", // or 'PUT'
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: JSON.stringify(data)
 					})
-					.catch(error => {
-						console.error("Error:", error);
-					});
+						.then(response => response.json())
+						.then(data => {
+							console.log("Success:", data);
+						})
+						.catch(error => {
+							console.error("Error:", error);
+						});
+				} else {
+					console.log("token not found token = " + store.token);
+				}
 			},
 			getToken: (email, password) => {
 				//alert(email + " " + password);
