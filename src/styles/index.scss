@@ -1,3 +1,33 @@
 /* 
     General Styles
 */
+
+.history-entry{
+    width:500px;
+    height: 50px;
+    border: 2px solid greenyellow;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px lightgray;
+    margin: 20px auto;
+    color: darkgrey;
+    
+}
+.history-entry:hover{
+    background-color: greenyellow;
+    color: darkgreen;
+    box-shadow: 3px 3px 3px gray;
+}
+body {
+    background-color: lightgray;
+}
+
+.container{
+    margin: 0px auto;
+    width: 800px;
+    border-radius: 10px;
+}
+.nav-button{
+    color: royalblue;
+    font-size:0.9em;
+    margin: 0 5px;
+}

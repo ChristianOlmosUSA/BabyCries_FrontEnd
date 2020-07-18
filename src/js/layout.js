@@ -35,7 +35,7 @@ export const Layout = () => {
 						<Route path="/video" component={Video} />
 						<Route path="/settings" component={Settings} />
 						<Route path="/historysingleday" component={HistorySingleDay} />
-						<Route path="/historyList" component={HistoryList} />
+						<Route path="/historylist" component={HistoryList} />
 						<Route path="/createnewaccount" component={CreateNewAccount} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
