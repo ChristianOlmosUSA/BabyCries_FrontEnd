@@ -15,6 +15,7 @@ import { Dashboard } from "./views/dashboard";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { BabyForm } from "./component/babyForm";
 
 //create your first component
 export const Layout = () => {

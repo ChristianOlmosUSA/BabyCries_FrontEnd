@@ -1,10 +1,11 @@
 import React from "react";
-import moment from "moment";
+//import moment from "moment";
 import "../../styles/historyList.scss";
 /* THIS IS REALLY A DRAFT OF A DRAFT! dont want a class, need to loop through props for all history */
 
 export const HistoryList = () => {
-	const [endDate, setEndDate] = React.useState(moment().subtract(7, "day"));
+	{
+		/*const [endDate, setEndDate] = React.useState(moment().subtract(7, "day"));
 	let current = moment();
 
 	let entries = [];
@@ -13,7 +14,8 @@ export const HistoryList = () => {
 		current = moment(current).subtract(1, "day");
 	}
 	console.log(entries);
-
+*/
+	}
 	return (
 		<div className="text-center container bg-white text-center">
 			<div>History List</div>
