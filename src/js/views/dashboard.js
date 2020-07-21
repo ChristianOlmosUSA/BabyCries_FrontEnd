@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import rigoImage from "../../img/rigo-baby.jpg";
 import PropTypes from "prop-types";
@@ -7,6 +7,11 @@ import "../../styles/home.scss";
 
 export const Dashboard = () => {
 	const { actions, store } = useContext(Context);
+
+	useEffect(() => {
+		actions.getUserData();
+	}, []);
+
 	//alert(store.token);
 	//store.token = "fake";
 	return (
@@ -17,14 +22,6 @@ export const Dashboard = () => {
 					<div className="col">Some Chart</div>
 					<div className="col">Some Chart</div>
 					<div className="col">Some Chart</div>
-					<div
-						type="button"
-						className="btn btn-primary"
-						onClick={() => {
-							actions.getUserData();
-						}}>
-						Get User data
-					</div>
 				</div>
 			) : (
 				<Redirect to="/login" />

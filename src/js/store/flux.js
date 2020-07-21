@@ -20,8 +20,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getUserData: () => {
 				let store = getStore();
 				if (store.token != null) {
-					alert(store.user_info.username);
-					console.log("token found, token = " + store.token);
+					console.log(store.user_info.username);
+					//console.log("token found, token = " + store.token);
 					let data = null;
 					fetch(
 						"https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/getuser/" +
@@ -38,6 +38,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						.then(response => response.json())
 						.then(data => {
 							console.log("Success:", data);
+							store.user_info = data;
+							setStore({ user_info: store.user_info });
 						})
 						.catch(error => {
 							console.error("Error:", error);
@@ -94,8 +96,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						let store = getStore();
 						store.token = data.jwt;
 						store.user_info = {
-							username: email,
-							password: password
+							username: email
 						};
 
 						setStore({ token: store.token });
