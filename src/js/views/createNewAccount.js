@@ -18,7 +18,7 @@ export const CreateNewAccount = () => (
 									<i className="fas fa-user" />
 								</span>
 							</div>
-							<input type="text" className="form-control" placeholder="parent user name" />
+							<input type="text" className="form-control" placeholder="email" />
 						</div>
 						<div className="input-group form-group">
 							<div className="input-group-prepend">

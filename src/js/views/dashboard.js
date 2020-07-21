@@ -8,7 +8,7 @@ import "../../styles/home.scss";
 export const Dashboard = () => {
 	const { actions, store } = useContext(Context);
 	//alert(store.token);
-	store.token = "fake";
+	//store.token = "fake";
 	return (
 		<div className="text-center mt-5 container-fluid">
 			{store.token ? (
@@ -17,6 +17,14 @@ export const Dashboard = () => {
 					<div className="col">Some Chart</div>
 					<div className="col">Some Chart</div>
 					<div className="col">Some Chart</div>
+					<div
+						type="button"
+						className="btn btn-primary"
+						onClick={() => {
+							actions.getUserData();
+						}}>
+						Get User data
+					</div>
 				</div>
 			) : (
 				<Redirect to="/login" />

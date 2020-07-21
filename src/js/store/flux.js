@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			token: null,
+			user_info: null,
 			demo: [
 				{
 					title: "FIRST",
@@ -16,6 +17,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			getUserData: () => {
+				let store = getStore();
+				if (store.token != null) {
+					alert(store.user_info.username);
+					console.log("token found, token = " + store.token);
+					let data = null;
+					fetch(
+						"https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/getuser/" +
+							store.user_info.username,
+						{
+							method: "GET", // or 'PUT'
+							headers: {
+								"Content-Type": "application/json",
+								Authorization: "Bearer " + store.token
+							}
+							//body: JSON.stringify(data)
+						}
+					)
+						.then(response => response.json())
+						.then(data => {
+							console.log("Success:", data);
+						})
+						.catch(error => {
+							console.error("Error:", error);
+						});
+				} else {
+					console.log("token not found token = " + store.token);
+				}
+			},
 			updateSettings: (babyName, dob, timeZone, gender) => {
 				let store = getStore();
 				if (store.token != null) {
@@ -26,7 +56,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						timeZone: timeZone,
 						gender: gender
 					};
-					fetch("https://3000-f3c76e20-2de6-4ec7-9549-62591ce8be59.ws-us02.gitpod.io/login", {
+					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/login", {
 						method: "PUT", // or 'PUT'
 						headers: {
 							"Content-Type": "application/json"
@@ -51,7 +81,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					password: password
 				};
 
-				fetch("https://3000-f3c76e20-2de6-4ec7-9549-62591ce8be59.ws-us02.gitpod.io/login", {
+				fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/login", {
 					method: "POST", // or 'PUT'
 					headers: {
 						"Content-Type": "application/json"
@@ -63,8 +93,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Success:", data);
 						let store = getStore();
 						store.token = data.jwt;
+						store.user_info = {
+							username: email,
+							password: password
+						};
 
 						setStore({ token: store.token });
+						setStore({ user_info: store.user_info });
 					})
 					.catch(error => {
 						console.error("Error:", error);
