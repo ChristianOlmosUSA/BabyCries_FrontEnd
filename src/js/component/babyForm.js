@@ -4,10 +4,13 @@ import { Context } from "../store/appContext";
 export const BabyForm = () => {
 	const { actions, store } = useContext(Context);
 	const [form, setForm] = React.useState(null);
-	const [babyName, setBabyName] = useState(null);
+	const [babyFirstName, setBabyFirstName] = useState(null);
+	const [babyLastName, setBabyLastName] = useState(null);
 	const [dob, setDOB] = useState(null);
 	const [timeZone, setTimeZone] = useState(null);
 	const [gender, setGender] = useState(null);
+	let userInfo = store.user_info;
+
 	return (
 		<div className="d-flex justify-content-center h-100 container">
 			<div className="card">
@@ -25,8 +28,21 @@ export const BabyForm = () => {
 							<input
 								type="text"
 								className="form-control"
-								placeholder="baby name"
-								onChange={e => setBabyName(e.target.value)}
+								placeholder="baby's first name"
+								onChange={e => setBabyFirstName(e.target.value)}
+							/>
+						</div>
+						<div className="input-group form-group">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<i className="fas fa-user" />
+								</span>
+							</div>
+							<input
+								type="text"
+								className="form-control"
+								placeholder="baby's last name"
+								onChange={e => setBabyLastName(e.target.value)}
 							/>
 						</div>
 						<div className="input-group form-group">
@@ -67,25 +83,15 @@ export const BabyForm = () => {
 								<option value="Male">Male</option>
 								<option value="Female">Female</option>
 							</select>
-							{/*<input
-								type="text"
-								className="form-control"
-								placeholder="gender"
-								onChange={e => setGender(e.target.value)}
-							/>*/}
 						</div>
-						{/* <div className="row align-items-center remember">
-							<input type="checkbox" />
-							Remember Me
-						</div> */}
 						<div className="form-group">
 							<input
 								type="button"
 								value="Update"
 								className="btn float-right login_btn"
 								onClick={() => {
-									actions.updateSettings(babyName, dob, timeZone, gender);
-									console.log(babyName, dob, timeZone, gender);
+									actions.addBaby(babyFirstName, babyLastName, dob, timeZone, gender);
+									console.log(babyFirstName, babyLastName, dob, timeZone, gender);
 								}}
 							/>
 						</div>

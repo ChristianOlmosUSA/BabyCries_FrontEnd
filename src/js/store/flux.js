@@ -48,20 +48,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log("token not found token = " + store.token);
 				}
 			},
-			updateSettings: (babyName, dob, timeZone, gender) => {
+			addBaby: (babyFirstName, babyLastName, dob, timeZone, gender) => {
 				let store = getStore();
 				if (store.token != null) {
 					console.log("token found, token = " + store.token);
 					const data = {
-						babyName: babyName,
-						dob: dob,
-						timeZone: timeZone,
-						gender: gender
+						first_name: babyFirstName,
+						last_name: babyLastName,
+						dob_baby: dob,
+						time_zone: timeZone,
+						baby_gender: gender
 					};
-					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/login", {
-						method: "PUT", // or 'PUT'
+					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/babies", {
+						method: "POST", // or 'PUT'
 						headers: {
-							"Content-Type": "application/json"
+							"Content-Type": "application/json",
+							Authorization: "Bearer " + store.token
 						},
 						body: JSON.stringify(data)
 					})
