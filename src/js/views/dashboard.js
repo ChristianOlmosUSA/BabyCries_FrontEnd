@@ -18,22 +18,26 @@ export const Dashboard = () => {
 		<div className="text-center">
 			{store.token ? (
 				<div className="d-flex flex-column bd-highlight mb-3">
-					{store.user_info
-						? Object.keys(store.user_info).map((item, key) => {
+					<div>User email = {store.user_info.email}</div>
+					<div>User ID = {store.user_info.id}</div>
+					<div>User active = {store.user_info.is_active ? "True" : "False"}</div>
+					<div>
+						{store.babies &&
+							store.babies.map((item, key) => {
 								return (
 									<div key={key} className="p-2 bd-highlight">
-										{item} :
-										{Array.isArray(store.user_info[item])
-											? "Empty"
-											: item == "is_active"
-												? store.user_info
-													? "true"
-													: "false"
-												: store.user_info[item]}
+										<div>{item.id}</div>
+										<div>{item.first_name}</div>
+										<div>{item.last_name}</div>
+										<div>{item.baby_gender}</div>
+										<div>{item.dob_baby}</div>
+										<div>{item.time_zone}</div>
+										<div>{item.parent_id}</div>
+										<div>{item.is_active ? "True" : "False"}</div>
 									</div>
 								);
-						  })
-						: console.log("User_info is empty")}
+							})}
+					</div>
 					<BabyForm />
 				</div>
 			) : (
@@ -42,9 +46,9 @@ export const Dashboard = () => {
 		</div>
 	);
 };
-Dashboard.propTypes = {
+/*Dashboard.propTypes = {
 	history: PropTypes.object
-};
+};*/
 /*if ((store.token = null)) {
 		history.push("/login");
 	}*/

@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			token: null,
 			user_info: null,
+			babies: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -39,7 +40,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						.then(data => {
 							console.log("Success:", data);
 							store.user_info = data;
-							setStore({ user_info: store.user_info });
+							setStore({
+								user_info: store.user_info,
+								babies: store.user_info.babies
+							});
 						})
 						.catch(error => {
 							console.error("Error:", error);

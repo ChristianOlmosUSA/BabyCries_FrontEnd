@@ -79,7 +79,7 @@ export const BabyForm = () => {
 								</span>
 							</div>
 							<select className="custom-select" id="gender2" onChange={e => setGender(e.target.value)}>
-								<option selected>Select gender</option>
+								<option value="DEFAULT">Select gender</option>
 								<option value="Male">Male</option>
 								<option value="Female">Female</option>
 							</select>
