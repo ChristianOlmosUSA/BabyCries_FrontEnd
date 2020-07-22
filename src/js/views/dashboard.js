@@ -8,12 +8,15 @@ import "../../styles/home.scss";
 
 export const Dashboard = () => {
 	const { actions, store } = useContext(Context);
+	const [babyState, setBabies] = useState("empty");
 
-	useEffect(() => {
-		actions.getUserData();
-	}, []);
-	//alert(store.token);
-	//store.token = "fake";
+	useEffect(
+		() => {
+			actions.getUserData();
+		},
+		[babyState]
+	);
+
 	return (
 		<div className="text-center">
 			{store.token ? (
@@ -21,11 +24,11 @@ export const Dashboard = () => {
 					<div>User email = {store.user_info.email}</div>
 					<div>User ID = {store.user_info.id}</div>
 					<div>User active = {store.user_info.is_active ? "True" : "False"}</div>
-					<div>
+					<div className="d-flex flex-column text-center">
 						{store.babies &&
 							store.babies.map((item, key) => {
 								return (
-									<div key={key} className="p-2 bd-highlight">
+									<div key={key} className="p-2 bd-highlight card">
 										<div>{item.id}</div>
 										<div>{item.first_name}</div>
 										<div>{item.last_name}</div>
@@ -34,6 +37,22 @@ export const Dashboard = () => {
 										<div>{item.time_zone}</div>
 										<div>{item.parent_id}</div>
 										<div>{item.is_active ? "True" : "False"}</div>
+										<div
+											id={item.id}
+											onClick={event => {
+												actions.deleteBaby(item.id);
+												//console.log(event.target.id);
+												let tmp = store.babies.filter(baby => {
+													return baby.id != event.target.id;
+												});
+
+												//Refresh using the state
+												store.babies = tmp;
+												console.log("store.babies = ", store.babies);
+												setBabies(tmp);
+											}}>
+											Delete baby here
+										</div>
 									</div>
 								);
 							})}

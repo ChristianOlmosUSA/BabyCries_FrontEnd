@@ -8,7 +8,7 @@ export const BabyForm = () => {
 	const [babyLastName, setBabyLastName] = useState(null);
 	const [dob, setDOB] = useState(null);
 	const [timeZone, setTimeZone] = useState(null);
-	const [gender, setGender] = useState(null);
+	const [gender, setGender] = useState("DEFAULT");
 	let userInfo = store.user_info;
 
 	return (
@@ -29,7 +29,10 @@ export const BabyForm = () => {
 								type="text"
 								className="form-control"
 								placeholder="baby's first name"
-								onChange={e => setBabyFirstName(e.target.value)}
+								value={babyFirstName}
+								onChange={e => {
+									setBabyFirstName(e.target.value);
+								}}
 							/>
 						</div>
 						<div className="input-group form-group">
@@ -42,6 +45,7 @@ export const BabyForm = () => {
 								type="text"
 								className="form-control"
 								placeholder="baby's last name"
+								value={babyLastName}
 								onChange={e => setBabyLastName(e.target.value)}
 							/>
 						</div>
@@ -55,6 +59,7 @@ export const BabyForm = () => {
 								type="text"
 								className="form-control"
 								placeholder="date of birth"
+								value={dob}
 								onChange={e => setDOB(e.target.value)}
 							/>
 						</div>
@@ -68,6 +73,7 @@ export const BabyForm = () => {
 								type="text"
 								className="form-control"
 								placeholder="time zone"
+								value={timeZone}
 								onChange={e => setTimeZone(e.target.value)}
 							/>
 						</div>
@@ -91,7 +97,18 @@ export const BabyForm = () => {
 								className="btn float-right login_btn"
 								onClick={() => {
 									actions.addBaby(babyFirstName, babyLastName, dob, timeZone, gender);
-									console.log(babyFirstName, babyLastName, dob, timeZone, gender);
+									setBabyFirstName("");
+									setBabyLastName("");
+									setDOB("");
+									setTimeZone("");
+									/*console.log(
+										"CLog form babyForm",
+										babyFirstName,
+										babyLastName,
+										dob,
+										timeZone,
+										gender
+                                    );*/
 								}}
 							/>
 						</div>

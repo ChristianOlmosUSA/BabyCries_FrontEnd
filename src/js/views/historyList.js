@@ -8,22 +8,31 @@ let entries = [];
 export const HistoryList = () => {
 	const { actions, store } = useContext(Context);
 	const [endDate, setEndDate] = useState(moment().subtract(7, "day"));
-	const [someData, setSomeData] = useState(null);
+	const [days, setDays] = useState([]);
 
-	useEffect(() => {
-		let current = moment();
+	useEffect(
+		() => {
+			let current = moment();
 
-		while (endDate.isBefore(current)) {
-			entries.push(moment(current));
-			current = moment(current).subtract(1, "day");
-		}
-		console.log("entries " + entries);
-		setSomeData({ data: entries });
-	}, []);
+			while (endDate.isBefore(current)) {
+				entries.push(moment(current));
+				current = moment(current).subtract(1, "day");
+			}
+			console.log("entries " + entries);
+			setDays(entries);
+		},
+		[endDate]
+	);
 
 	return (
 		<div className="text-center container bg-white text-center">
-			{someData ? console.dir(someData) : "loading..."}
+			{days.map(e => {
+				return (
+					<div key={e} className="history-entry">
+						{e.format("D MMM YYYY")}
+					</div>
+				);
+			})}
 			<div
 				type="button"
 				className="history-entry"

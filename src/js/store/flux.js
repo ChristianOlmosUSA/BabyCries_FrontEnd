@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			token: null,
 			user_info: null,
-			babies: [],
+			babies: null,
 			demo: [
 				{
 					title: "FIRST",
@@ -18,27 +18,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			setStore: setStore,
 			getUserData: () => {
 				let store = getStore();
 				if (store.token != null) {
-					console.log(store.user_info.username);
+					//console.log(store.user_info.username);
 					//console.log("token found, token = " + store.token);
 					let data = null;
-					fetch(
-						"https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/getuser/" +
-							store.user_info.username,
-						{
-							method: "GET", // or 'PUT'
-							headers: {
-								"Content-Type": "application/json",
-								Authorization: "Bearer " + store.token
-							}
-							//body: JSON.stringify(data)
+					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/user", {
+						method: "GET", // or 'PUT'
+						headers: {
+							"Content-Type": "application/json",
+							Authorization: "Bearer " + store.token
 						}
-					)
+						//body: JSON.stringify(data)
+					})
 						.then(response => response.json())
 						.then(data => {
-							console.log("Success:", data);
+							console.log("Success from getUserData :", data);
 							store.user_info = data;
 							setStore({
 								user_info: store.user_info,
@@ -65,6 +62,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 					};
 					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/babies", {
 						method: "POST", // or 'PUT'
+						headers: {
+							"Content-Type": "application/json",
+							Authorization: "Bearer " + store.token
+						},
+						body: JSON.stringify(data)
+					})
+						.then(response => response.json())
+						.then(data => {
+							console.log("Success from addBaby: ", data);
+							setStore({
+								babies: [...store.babies, data]
+							});
+							console.log("setStore from addBaby results: ", store.babies);
+						})
+						.catch(error => {
+							console.error("Error:", error);
+						});
+				} else {
+					console.log("token not found token = " + store.token);
+				}
+			},
+			deleteBaby: babyID => {
+				console.log("Deleting baby = ", babyID);
+				let store = getStore();
+				if (store.token != null) {
+					console.log("token found, token = " + store.token);
+					const data = {
+						baby_id: babyID
+					};
+					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/babies", {
+						method: "DELETE", // or 'PUT'
 						headers: {
 							"Content-Type": "application/json",
 							Authorization: "Bearer " + store.token

@@ -15,7 +15,7 @@ export const Login = ({ history }) => {
 		//alert(event);
 		//alert("email " + email + " password " + password);
 		actions.getToken(email, password);
-		actions.getUserData(email);
+		//actions.getUserData();
 	};
 
 	return (
