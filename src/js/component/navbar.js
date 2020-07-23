@@ -13,7 +13,7 @@ export const Navbar = () => {
 				<Link className="nav-button" to="./">
 					HOME
 				</Link>
-				<Link className="nav-button" to="/livevideo">
+				<Link className="nav-button" to="/video">
 					LIVE VIDEO
 				</Link>
 				<Link className="nav-button" to="/dashboard">

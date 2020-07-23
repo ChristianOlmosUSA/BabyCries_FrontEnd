@@ -3,13 +3,10 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 
 export const Video = () => (
-	<div className="text-center mt-5">
+	<div className="text-center backdrop">
 		<h1>Live Vidio Here!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
+		<dir className="m-5">
+			<img className="shadow-lg" src="https://via.placeholder.com/640x480" />
+		</dir>
 	</div>
 );

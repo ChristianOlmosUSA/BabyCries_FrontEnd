@@ -4,10 +4,10 @@ import { Context } from "../store/appContext";
 export const BabyForm = () => {
 	const { actions, store } = useContext(Context);
 	const [form, setForm] = React.useState(null);
-	const [babyFirstName, setBabyFirstName] = useState(null);
-	const [babyLastName, setBabyLastName] = useState(null);
-	const [dob, setDOB] = useState(null);
-	const [timeZone, setTimeZone] = useState(null);
+	const [babyFirstName, setBabyFirstName] = useState("");
+	const [babyLastName, setBabyLastName] = useState("");
+	const [dob, setDOB] = useState("");
+	const [timeZone, setTimeZone] = useState("");
 	const [gender, setGender] = useState("DEFAULT");
 	let userInfo = store.user_info;
 
@@ -84,7 +84,11 @@ export const BabyForm = () => {
 									<i className="fas fa-user" />
 								</span>
 							</div>
-							<select className="custom-select" id="gender2" onChange={e => setGender(e.target.value)}>
+							<select
+								className="custom-select"
+								id="gender2"
+								value={gender}
+								onChange={e => setGender(e.target.value)}>
 								<option value="DEFAULT">Select gender</option>
 								<option value="Male">Male</option>
 								<option value="Female">Female</option>
@@ -101,6 +105,7 @@ export const BabyForm = () => {
 									setBabyLastName("");
 									setDOB("");
 									setTimeZone("");
+									setGender("DEFAULT");
 									/*console.log(
 										"CLog form babyForm",
 										babyFirstName,
