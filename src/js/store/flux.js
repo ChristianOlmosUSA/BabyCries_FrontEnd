@@ -140,6 +140,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error("Error:", error);
 					});
 			},
+			addAlarm: baby_id => {},
 
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
