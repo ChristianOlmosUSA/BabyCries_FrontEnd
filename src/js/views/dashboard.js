@@ -4,6 +4,8 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import PropTypes from "prop-types";
 import { Redirect } from "react-router-dom";
 import { BabyForm } from "../component/babyForm";
+import { AlarmForm } from "../component/alarmForm";
+import moment from "moment";
 import "../../styles/home.scss";
 
 export const Dashboard = () => {
@@ -18,7 +20,7 @@ export const Dashboard = () => {
 	);
 
 	return (
-		<div className="text-center">
+		<div className="text-center backdrop">
 			{store.token ? (
 				<div className="d-flex flex-column bd-highlight mb-3">
 					<div>User email = {store.user_info.email}</div>
@@ -28,7 +30,7 @@ export const Dashboard = () => {
 						{store.babies &&
 							store.babies.map((item, key) => {
 								return (
-									<div key={key} className="m-2 p-2 bd-highlight card">
+									<div key={key} className="m-4 p-2 bd-highlight card h-auto">
 										<div className="d-flex flex-row mx-auto">
 											<div>
 												{item.first_name} {item.last_name}
@@ -41,6 +43,11 @@ export const Dashboard = () => {
 											<div>{item.time_zone}</div>
 											<div>{item.parent_id}</div>
 											<div>{item.is_active ? "True" : "False"}</div>
+											<div>
+												{item.alarms.map(alarm => {
+													return <div key={alarm.id}>{alarm.created_date}</div>;
+												})}
+											</div>
 											<div
 												className="btn btn-danger"
 												type="button"
@@ -65,6 +72,7 @@ export const Dashboard = () => {
 							})}
 					</div>
 					<BabyForm />
+					<AlarmForm />
 				</div>
 			) : (
 				<Redirect to="/login" />

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 
 export const BabyForm = () => {
-	const { actions, store } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	const [form, setForm] = React.useState(null);
 	const [babyFirstName, setBabyFirstName] = useState("");
 	const [babyLastName, setBabyLastName] = useState("");
@@ -12,8 +12,8 @@ export const BabyForm = () => {
 	let userInfo = store.user_info;
 
 	return (
-		<div className="d-flex justify-content-center h-100 container">
-			<div className="card">
+		<div className="d-flex justify-content-center h-auto container m-5 mx-auto">
+			<div className="card h-auto">
 				<div className="card-header">
 					<h3>Add a Baby here</h3>
 				</div>

@@ -19,6 +19,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			setStore: setStore,
+			addAlarm: (dbBaby, crying, overheated, breathing, faceDown, outOfCrib) => {
+				//console.log(dbBaby, crying, overheated, breathing, faceDown, outOfCrib);
+			},
 			getUserData: () => {
 				let store = getStore();
 				if (store.token != null) {
@@ -140,7 +143,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error("Error:", error);
 					});
 			},
-			addAlarm: baby_id => {},
 
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
