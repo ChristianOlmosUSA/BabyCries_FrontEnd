@@ -5,7 +5,7 @@ export const Navbar = () => {
 	//const [dropDown, setDropDown] = useState(false);
 	//const toggleUpOrDrop = () => setDropDown(!dropDown);
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light bg-light">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">BabyName</span>
 			</Link>
