@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 						.then(response => response.json())
 						.then(data => {
-							console.log("Success from getUserData :", data);
+							//	console.log("Success from getUserData :", data);
 							store.user_info = data;
 							setStore({
 								user_info: store.user_info,
@@ -43,16 +43,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 							});
 						})
 						.catch(error => {
-							console.error("Error:", error);
+							//	console.error("Error:", error);
 						});
 				} else {
-					console.log("token not found token = " + store.token);
+					//	console.log("token not found token = " + store.token);
 				}
 			},
 			addBaby: (babyFirstName, babyLastName, dob, timeZone, gender) => {
 				let store = getStore();
 				if (store.token != null) {
-					console.log("token found, token = " + store.token);
+					//	console.log("token found, token = " + store.token);
 					const data = {
 						first_name: babyFirstName,
 						last_name: babyLastName,
@@ -70,24 +70,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 						.then(response => response.json())
 						.then(data => {
-							console.log("Success from addBaby: ", data);
+							//	console.log("Success from addBaby: ", data);
 							setStore({
 								babies: [...store.babies, data]
 							});
-							console.log("setStore from addBaby results: ", store.babies);
+							//	console.log("setStore from addBaby results: ", store.babies);
 						})
 						.catch(error => {
-							console.error("Error:", error);
+							//	console.error("Error:", error);
 						});
 				} else {
-					console.log("token not found token = " + store.token);
+					//console.log("token not found token = " + store.token);
 				}
 			},
 			deleteBaby: babyID => {
-				console.log("Deleting baby = ", babyID);
+				//console.log("Deleting baby = ", babyID);
 				let store = getStore();
 				if (store.token != null) {
-					console.log("token found, token = " + store.token);
+					//	console.log("token found, token = " + store.token);
 					const data = {
 						baby_id: babyID
 					};
@@ -101,13 +101,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 						.then(response => response.json())
 						.then(data => {
-							console.log("Success:", data);
+							//		console.log("Success:", data);
 						})
 						.catch(error => {
-							console.error("Error:", error);
+							//		console.error("Error:", error);
 						});
 				} else {
-					console.log("token not found token = " + store.token);
+					//	console.log("token not found token = " + store.token);
 				}
 			},
 			getToken: (email, password) => {
@@ -126,7 +126,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(response => response.json())
 					.then(data => {
-						console.log("Success:", data);
+						//	console.log("Success:", data);
 						let store = getStore();
 						store.token = data.jwt;
 						store.user_info = {
@@ -137,7 +137,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ user_info: store.user_info });
 					})
 					.catch(error => {
-						console.error("Error:", error);
+						//	console.error("Error:", error);
 					});
 			},
 			addAlarm: baby_id => {},

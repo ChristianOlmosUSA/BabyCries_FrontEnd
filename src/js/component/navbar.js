@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
 	//const [dropDown, setDropDown] = useState(false);
 	//const toggleUpOrDrop = () => setDropDown(!dropDown);
+	const [babyName, setBabyName] = useState("Magic Monitor");
+
 	return (
 		<nav className="navbar navbar-light bg-light">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">BabyName</span>
+				<span className="navbar-brand mb-0 h1">{`${babyName}`}</span>
 			</Link>
 			<div className="ml-auto">
 				<Link className="nav-button" to="./">

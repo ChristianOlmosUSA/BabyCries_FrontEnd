@@ -18,7 +18,7 @@ export const HistoryList = () => {
 				entries.push(moment(current));
 				current = moment(current).subtract(1, "day");
 			}
-			console.log("entries " + entries);
+
 			setDays(entries);
 		},
 		[endDate]
