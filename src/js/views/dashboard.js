@@ -61,7 +61,7 @@ export const Dashboard = () => {
 
 													//Refresh using the state
 													store.babies = tmp;
-													console.log("store.babies = ", store.babies);
+
 													setBabies(tmp);
 												}}>
 												Delete baby here

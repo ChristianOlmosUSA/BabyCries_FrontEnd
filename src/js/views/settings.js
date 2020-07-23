@@ -83,7 +83,6 @@ export const Settings = () => {
 									className="btn float-right login_btn"
 									onClick={() => {
 										actions.updateSettings(babyName, dob, timeZone, gender);
-										console.log(babyName, dob, timeZone, gender);
 									}}
 								/>
 							</div>
