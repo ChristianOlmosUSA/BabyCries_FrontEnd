@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import moment from "moment";
 import "../../styles/historyList.scss";
-/* THIS IS REALLY A DRAFT OF A DRAFT! dont want a class, need to loop through props for all history */
+/*...TO DO:  onClick we need to request the data for said day and open it in historySingleDay  */
 let entries = [];
 
 export const HistoryList = () => {
@@ -37,7 +37,7 @@ export const HistoryList = () => {
 				type="button"
 				className="history-entry"
 				onClick={() => setEndDate(moment(endDate).subtract(7, "days"))}>
-				mode days
+				more days
 			</div>
 		</div>
 	);

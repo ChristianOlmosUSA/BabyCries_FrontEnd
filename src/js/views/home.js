@@ -6,30 +6,35 @@ export const Home = () => (
 	<div className="text-center backdrop">
 		<div className="d-flex justify-content-between text-nowrap">
 			<h1 className="p-5">
-				<span className="p5 m5">Magic Monitor, always there!</span>
+				<span className="para1">
+					<h2>
+						Magic Monitor, <i>always there!</i>
+					</h2>
+				</span>
 				<div className="p5 mt-3">
-					<h5 className="p2">Do you want to be alerted if you baby rolls onto their face?</h5>
-					<h5 className="p2">How about a text message if they stop breathing?</h5>
-					<h5 className="p2">And help with all the crying...</h5>
-					<h5 className="p2">Why are they crying? Magic Monitor helps to guess</h5>
-					<h5 className="p2" />
-					<h5 className="p2" />
-					<h5 className="p2" />
-					<h5 className="p2" />
+					<div className="para1">Do you want to be alerted if you baby rolls onto their face?</div>
+					<div className="para1">How about a text message if they stop breathing?</div>
+					<div className="para1">And help with all the crying...</div>
+					<div className="para1">Why are they crying? Magic Monitor helps to guess</div>
 				</div>
 			</h1>
 			<p className="p-5">
-				<img className="shadow-lg" src={rigoImage} />
+				<img className="homeImage" src={rigoImage} />
 			</p>
 		</div>
 
-		<span className="p5 m5">How Magic Monitor Works</span>
+		<span className="para2">
+			<h2>How Magic Monitor Works</h2>
+		</span>
 		<div className="p5 mt-3">
-			<h5 className="p2">Using Googles artificial intelligence</h5>
-			<h5 className="p2">Every breath is counted and timed</h5>
-			<h5 className="p2">face position is checked every second</h5>
-			<h5 className="p2">and every cry is compared to a database of 700 baby cries</h5>
-			<h5 className="p2">explained by reason: pain, hunger, diaper change, discomfort</h5>
+			<div className="para2">Using artificial intelligence from Google</div>
+			<div className="para2">Every breath is counted and timed</div>
+			<div className="para2">her face position is checked every second</div>
+			<div className="para2">and his every cry is compared to a database of 700 baby cries</div>
+			<div className="para2">explained by reasons such as pain, hunger, diaper change, discomfort</div>
+			<div className="para2">
+				<small>* no images or sounds are stored by us, and you have complete control over the data</small>
+			</div>
 		</div>
 	</div>
 );

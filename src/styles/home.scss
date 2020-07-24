@@ -1,5 +1,23 @@
 
+.para1{
+     display: flex;
+  justify-content: left;
+  align-self: left;
+ // background: silver;
+  width: 50%;
+  height: 30%;
+  font-size: 1rem
+}
 
+.para2{
+   //  display: flex;
+  justify-content: right;
+  align-self: right;
+ // background: silver;
+  width: 50%;
+  height: 30%;
+  font-size: 1rem
+}
 .inputFields{
  width: 300px;
  height: 60px;
