@@ -7,7 +7,7 @@ export const Navbar = () => {
 	const [babyName, setBabyName] = useState("Magic Monitor");
 
 	return (
-		<nav className="navbar navbar-light bg-light">
+		<nav className="navbar navbar-light bg-light w-100">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">{`${babyName}`}</span>
 			</Link>

@@ -20,7 +20,7 @@ export const Dashboard = () => {
 	);
 
 	return (
-		<div className="text-center backdrop">
+		<div className="text-center backdrop w-100">
 			{store.token ? (
 				<div className="d-flex flex-column bd-highlight mb-3">
 					{store.user_info.msg == "Token has expired" ? ((store.token = null), <Redirect to="/login" />) : ""}

@@ -4,28 +4,31 @@ import "../../styles/home.scss";
 
 export const Home = () => (
 	<div className="text-center backdrop">
-		<div className="d-flex justify-content-between text-nowrap">
-			<h1 className="p-5">
-				<span className="para1">
-					<h2>
-						Magic Monitor, <i>always there!</i>
-					</h2>
-				</span>
-				<div className="p5 mt-3">
+		<div className="d-flex mx-auto">
+			<div className="p-5">
+				<div className="d-flex justify-content-around row">
+					<div className="col-md-5">
+						Magic Monitor,
+						<i> always there!</i>
+					</div>
+					<div className="col-md-5">
+						<p className="">
+							<img className="homeImage img-fluid" src={rigoImage} />
+						</p>
+					</div>
+				</div>
+				<div className="p5 mt-3 flex-row">
 					<div className="para1">Do you want to be alerted if you baby rolls onto their face?</div>
 					<div className="para1">How about a text message if they stop breathing?</div>
 					<div className="para1">And help with all the crying...</div>
 					<div className="para1">Why are they crying? Magic Monitor helps to guess</div>
 				</div>
-			</h1>
-			<p className="p-5">
-				<img className="homeImage" src={rigoImage} />
-			</p>
+			</div>
 		</div>
 
-		<span className="para2">
+		<div className="para2">
 			<h2>How Magic Monitor Works</h2>
-		</span>
+		</div>
 		<div className="p5 mt-3">
 			<div className="para2">Using artificial intelligence from Google</div>
 			<div className="para2">Every breath is counted and timed</div>
