@@ -7,10 +7,10 @@ export const Home = () => (
 		<div className="d-flex mx-auto">
 			<div className="p-5">
 				<div className="d-flex justify-content-between row">
-					<div className="mx-5">
+					<p className="mx-5 h2">
 						Magic Monitor,
 						<i> always there!</i>
-					</div>
+					</p>
 					<div className="mx-auto">
 						<p className="">
 							<img className="homeImage img-fluid" src={rigoImage} />
