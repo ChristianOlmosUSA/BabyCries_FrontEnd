@@ -5,10 +5,10 @@ export const AlarmForm = () => {
 	const { store, actions } = useContext(Context);
 	const [dbBaby, setDBBaby] = useState("DEFAULT");
 	const [crying, setCrying] = useState("");
-	const [overheated, setOverheated] = useState("False");
-	const [breathing, setBreathing] = useState("True");
-	const [faceDown, setFaceDown] = useState("False");
-	const [outOfCrib, setOutOfCrib] = useState("False");
+	const [overheated, setOverheated] = useState("false");
+	const [breathing, setBreathing] = useState("true");
+	const [faceDown, setFaceDown] = useState("false");
+	const [outOfCrib, setOutOfCrib] = useState("false");
 
 	return (
 		<div className="d-flex justify-content-center h-auto container m-5 mx-auto">
@@ -63,8 +63,8 @@ export const AlarmForm = () => {
 								className="custom-select"
 								value={overheated}
 								onChange={e => setOverheated(e.target.value)}>
-								<option value="True">Overheated - True</option>
-								<option value="False">Overheated - False</option>
+								<option value="true">Overheated - True</option>
+								<option value="false">Overheated - False</option>
 							</select>
 						</div>
 						<div className="input-group form-group">
@@ -77,8 +77,8 @@ export const AlarmForm = () => {
 								className="custom-select"
 								value={breathing}
 								onChange={e => setBreathing(e.target.value)}>
-								<option value="True">Breathing - True</option>
-								<option value="False">Breathing - False</option>
+								<option value="true">Breathing - True</option>
+								<option value="false">Breathing - False</option>
 							</select>
 						</div>
 						<div className="input-group form-group">
@@ -91,8 +91,8 @@ export const AlarmForm = () => {
 								className="custom-select"
 								value={faceDown}
 								onChange={e => setFaceDown(e.target.value)}>
-								<option value="True">Face Down - True</option>
-								<option value="False">Face Down - False</option>
+								<option value="true">Face Down - True</option>
+								<option value="false">Face Down - False</option>
 							</select>
 						</div>
 						<div className="input-group form-group">
@@ -105,8 +105,8 @@ export const AlarmForm = () => {
 								className="custom-select"
 								value={outOfCrib}
 								onChange={e => setOutOfCrib(e.target.value)}>
-								<option value="True">Out Of Crib - True</option>
-								<option value="False">Out Of Crib - False</option>
+								<option value="true">Out Of Crib - True</option>
+								<option value="false">Out Of Crib - False</option>
 							</select>
 						</div>
 						<div className="form-group">

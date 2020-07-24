@@ -23,6 +23,7 @@ export const Dashboard = () => {
 		<div className="text-center backdrop">
 			{store.token ? (
 				<div className="d-flex flex-column bd-highlight mb-3">
+					{store.user_info.msg == "Token has expired" ? ((store.token = null), <Redirect to="/login" />) : ""}
 					<div>User email = {store.user_info.email}</div>
 					<div>User ID = {store.user_info.id}</div>
 					<div>User active = {store.user_info.is_active ? "True" : "False"}</div>
@@ -37,12 +38,12 @@ export const Dashboard = () => {
 											</div>
 										</div>
 										<div className="card-body">
-											<div>{item.id}</div>
-											<div>{item.baby_gender}</div>
-											<div>{item.dob_baby}</div>
-											<div>{item.time_zone}</div>
-											<div>{item.parent_id}</div>
-											<div>{item.is_active ? "True" : "False"}</div>
+											<div>ID : {item.id}</div>
+											<div>Gender : {item.baby_gender}</div>
+											<div>DOB : {item.dob_baby}</div>
+											<div>Time Zone : {item.time_zone}</div>
+											<div>Parent ID : {item.parent_id}</div>
+											<div>Active : {item.is_active ? "True" : "False"}</div>
 											<div>
 												{item.alarms.map(alarm => {
 													return <div key={alarm.id}>{alarm.created_date}</div>;

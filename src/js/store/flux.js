@@ -21,6 +21,46 @@ const getState = ({ getStore, getActions, setStore }) => {
 			setStore: setStore,
 			addAlarm: (dbBaby, crying, overheated, breathing, faceDown, outOfCrib) => {
 				//console.log(dbBaby, crying, overheated, breathing, faceDown, outOfCrib);
+
+				overheated == "True" ? (overheated = true) : (overheated = false);
+				breathing == "True" ? (breathing = true) : (breathing = false);
+				faceDown == "True" ? (faceDown = true) : (faceDown = false);
+				outOfCrib == "True" ? (outOfCrib = true) : (outOfCrib = false);
+
+				let store = getStore();
+				if (store.token != null) {
+					//	console.log("token found, token = " + store.token);
+					const data = {
+						baby_id: dbBaby,
+						crying: crying,
+						overheated: overheated,
+						breathing: breathing,
+						face_down: faceDown,
+						out_of_crib: outOfCrib,
+						is_active: true
+					};
+					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/alarm", {
+						method: "POST", // or 'PUT'
+						headers: {
+							"Content-Type": "application/json",
+							Authorization: "Bearer " + store.token
+						},
+						body: JSON.stringify(data)
+					})
+						.then(response => response.json())
+						.then(data => {
+							console.log("Success from addAlarm: ", data);
+							setStore({
+								babies: [...store.babies.alarms, data]
+							});
+							console.log("setStore from addAlarm results: ", store.babies.alarms);
+						})
+						.catch(error => {
+							console.error("Error:", error);
+						});
+				} else {
+					//console.log("token not found token = " + store.token);
+				}
 			},
 			getUserData: () => {
 				let store = getStore();
