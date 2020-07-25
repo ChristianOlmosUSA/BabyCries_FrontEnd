@@ -9,7 +9,7 @@ import "../../styles/home.scss";
 export const Home = () => (
 	<div className="text-center backdrop containter-fluid">
 		<div className="p5 mx-auto flex-col">
-			<div className="p-5">
+			<div className="p-3">
 				<div className="d-flex flex-wrap row">
 					<div className="w-100 mx-auto m-2 h2 col flex-wrap">
 						<p className="w-100">
@@ -25,22 +25,24 @@ export const Home = () => (
 				</div>
 			</div>
 		</div>
-		<div className="container homePageLogo">
-			<div className="d-flex flex-row justify-content-around w-50 ml-3">
-				<img className="img-fluid m-3" src={RPi_Logo} />
-				<img className="img-fluid m-3" src={TF_Logo} />
-				<img className="img-fluid m-3" src={OpenCV_Logo} />
-			</div>
+
+		<div className="p5 mx-auto flex-col p-2">
+			<div className="bullets">Do you want to be alerted if you baby rolls onto their face?</div>
+			<div className="bullets">How about a text message if they stop breathing?</div>
+			<div className="bullets">And help with all the crying...</div>
+			<div className="bullets">Why are they crying? Magic Monitor helps to guess</div>
 		</div>
-		<div className="p5 mx-auto flex-col">
-			<div className="">Do you want to be alerted if you baby rolls onto their face?</div>
-			<div className="">How about a text message if they stop breathing?</div>
-			<div className="">And help with all the crying...</div>
-			<div className="">Why are they crying? Magic Monitor helps to guess</div>
-		</div>
+
 		<div className="p5 mt-3 flex-col">
 			<div className="">
 				<h2>How Magic Monitor Works</h2>
+			</div>
+			<div className="container homePageLogo">
+				<div className="d-flex flex-row justify-content-around w-50 ml-3">
+					<img className="img-fluid m-3" src={RPi_Logo} />
+					<img className="img-fluid m-3" src={TF_Logo} />
+					<img className="img-fluid m-3" src={OpenCV_Logo} />
+				</div>
 			</div>
 			<div className="p5 mt-3">
 				<div className="">Using artificial intelligence from Google</div>

@@ -1,6 +1,24 @@
 /* 
     General Styles
 */
+@media (min-width: 0px) and (max-width: 500px) {
+    .NBLinks {
+        display: none;
+    }
+    .Hamburger {
+        display: block;
+        background-color: transparent;
+        color: black;
+        float: right;
+    }
+
+ }
+ @media (min-width: 500px) {
+    .Hamburger {
+        display: none;
+    }
+
+ }
 
 .history-entry{
     width:500px;
@@ -40,3 +58,12 @@ body {
 .backdrop {
     background-image: linear-gradient(-90deg, pink, lightblue);
 }
+.bullets {
+    transform:scale(1, 1);
+    transition: 1s;
+        margin: .5em;
+
+    &:hover {
+        transform:scale(1.5, 1.5);
+    }
+} 
