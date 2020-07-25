@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
+import RPi_Logo from "../../img/RPi-Logo.png";
+import TF_Logo from "../../img/TF-Logo.png";
 import "../../styles/home.scss";
 
 export const Home = () => (
@@ -7,17 +9,22 @@ export const Home = () => (
 		<div className="d-flex mx-auto">
 			<div className="p-5">
 				<div className="d-flex justify-content-between row">
-					<p className="mx-5 h2">
+					<p className="mx-5 h2 col-xs-2">
 						Magic Monitor,
 						<i> always there!</i>
 					</p>
-					<div className="mx-auto">
+
+					<div className="mx-auto col-xs-8">
 						<p className="">
 							<img className="homeImage img-fluid" src={rigoImage} />
 						</p>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div className="p5 mx-auto flex-col RPiLogo">
+			<img className="img-thumbnail img-fluid col-xs-2" src={RPi_Logo} />
+			<img className="img-thumbnail img-fluid col-xs-2" src={TF_Logo} />
 		</div>
 		<div className="p5 mx-auto flex-col">
 			<div className="">Do you want to be alerted if you baby rolls onto their face?</div>
