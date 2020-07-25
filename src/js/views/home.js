@@ -2,29 +2,35 @@ import React, { useState } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import RPi_Logo from "../../img/RPi-Logo.png";
 import TF_Logo from "../../img/TF-Logo.png";
+import OpenCV_Logo from "../../img/OpenCV-Logo.png";
+import MagicMonitor_Logo from "../../img/MagicMonitor-Logo.png";
 import "../../styles/home.scss";
 
 export const Home = () => (
 	<div className="text-center backdrop">
-		<div className="d-flex mx-auto">
+		<div className="d-flex mx-auto container-fluid">
 			<div className="p-5">
-				<div className="d-flex justify-content-between row">
-					<p className="mx-5 h2 col-xs-2">
-						Magic Monitor,
-						<i> always there!</i>
-					</p>
-
-					<div className="mx-auto col-xs-8">
-						<p className="">
-							<img className="homeImage img-fluid" src={rigoImage} />
+				<div className="d-flex flex-wrap row containter">
+					<div className="mx-auto m-2 h2 col-5 flex-wrap">
+						<p>
+							<img src={MagicMonitor_Logo} />
+							<i> always there!</i>
 						</p>
 					</div>
 				</div>
+				<div className="mx-auto col-5 flex-wrap">
+					<p className="">
+						<img className="homeImage img-fluid" src={rigoImage} />
+					</p>
+				</div>
 			</div>
 		</div>
-		<div className="p5 mx-auto flex-col RPiLogo">
-			<img className="img-thumbnail img-fluid col-xs-2" src={RPi_Logo} />
-			<img className="img-thumbnail img-fluid col-xs-2" src={TF_Logo} />
+		<div className="container homePageLogo">
+			<div className="d-flex flex-row justify-content-around w-100">
+				<img className="img-fluid m-5" src={RPi_Logo} />
+				<img className="img-fluid m-5" src={TF_Logo} />
+				<img className="img-fluid m-5" src={OpenCV_Logo} />
+			</div>
 		</div>
 		<div className="p5 mx-auto flex-col">
 			<div className="">Do you want to be alerted if you baby rolls onto their face?</div>
