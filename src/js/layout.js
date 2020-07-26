@@ -12,6 +12,7 @@ import { HistorySingleDay } from "./views/historySingleDay";
 import { HistoryList } from "./views/historyList";
 import { CreateNewAccount } from "./views/createNewAccount";
 import { Dashboard } from "./views/dashboard";
+import { AdminAlarm } from "./views/admin_alarm";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -33,6 +34,7 @@ export const Layout = () => {
 						<Route path="/demo" component={Demo} />
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/dashboard" component={Dashboard} />
+						<Route exact path="/admin_alarm" component={AdminAlarm} />
 						<Route path="/video" component={Video} />
 						<Route path="/settings" component={Settings} />
 						<Route path="/historysingleday" component={HistorySingleDay} />

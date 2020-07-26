@@ -7,7 +7,7 @@ import MagicMonitor_Logo from "../../img/MagicMonitor-Logo.png";
 import "../../styles/home.scss";
 
 export const Home = () => (
-	<div className="text-center backdrop containter-fluid">
+	<div className="text-center backdrop containter-fluid pb-4">
 		<div className="p5 mx-auto flex-col">
 			<div className="p-3">
 				<div className="d-flex flex-wrap row">

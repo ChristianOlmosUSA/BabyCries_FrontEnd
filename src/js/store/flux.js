@@ -19,11 +19,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			setStore: setStore,
-			addAlarm: (dbBaby, crying, overheated, breathing, faceDown, outOfCrib) => {
+			addAlarm: (dbBaby, crying, dbLevel, overheated, breathing, faceDown, outOfCrib) => {
 				//console.log(dbBaby, crying, overheated, breathing, faceDown, outOfCrib);
 
 				overheated == "True" ? (overheated = true) : (overheated = false);
-				breathing == "True" ? (breathing = true) : (breathing = false);
 				faceDown == "True" ? (faceDown = true) : (faceDown = false);
 				outOfCrib == "True" ? (outOfCrib = true) : (outOfCrib = false);
 
@@ -33,12 +32,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const data = {
 						baby_id: dbBaby,
 						crying: crying,
+						decibel_level: parseInt(dbLevel),
 						overheated: overheated,
-						breathing: breathing,
+						breathing: parseInt(breathing),
 						face_down: faceDown,
 						out_of_crib: outOfCrib,
 						is_active: true
 					};
+					console.log(data);
 					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/alarm", {
 						method: "POST", // or 'PUT'
 						headers: {

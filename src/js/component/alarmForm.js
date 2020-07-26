@@ -1,12 +1,17 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 
+function myFunc(arg) {
+	console.log(`arg was => ${arg}`);
+}
+
 export const AlarmForm = () => {
 	const { store, actions } = useContext(Context);
 	const [dbBaby, setDBBaby] = useState("DEFAULT");
 	const [crying, setCrying] = useState("");
+	const [dbLevel, setDBLevel] = useState(0);
 	const [overheated, setOverheated] = useState("false");
-	const [breathing, setBreathing] = useState("true");
+	const [breathing, setBreathing] = useState(0);
 	const [faceDown, setFaceDown] = useState("false");
 	const [outOfCrib, setOutOfCrib] = useState("false");
 
@@ -59,6 +64,22 @@ export const AlarmForm = () => {
 									<i className="fas fa-user" />
 								</span>
 							</div>
+							<input
+								type="text"
+								className="form-control"
+								placeholder="Decible Level"
+								value={dbLevel}
+								onChange={e => {
+									setDBLevel(e.target.value);
+								}}
+							/>
+						</div>
+						<div className="input-group form-group">
+							<div className="input-group-prepend">
+								<span className="input-group-text">
+									<i className="fas fa-user" />
+								</span>
+							</div>
 							<select
 								className="custom-select"
 								value={overheated}
@@ -73,13 +94,15 @@ export const AlarmForm = () => {
 									<i className="fas fa-user" />
 								</span>
 							</div>
-							<select
-								className="custom-select"
+							<input
+								type="text"
+								className="form-control"
+								placeholder="Breaths per minute"
 								value={breathing}
-								onChange={e => setBreathing(e.target.value)}>
-								<option value="true">Breathing - True</option>
-								<option value="false">Breathing - False</option>
-							</select>
+								onChange={e => {
+									setBreathing(e.target.value);
+								}}
+							/>
 						</div>
 						<div className="input-group form-group">
 							<div className="input-group-prepend">
@@ -115,11 +138,20 @@ export const AlarmForm = () => {
 								value="Update"
 								className="btn float-right login_btn"
 								onClick={() => {
-									actions.addAlarm(dbBaby, crying, overheated, breathing, faceDown, outOfCrib);
+									actions.addAlarm(
+										dbBaby,
+										crying,
+										dbLevel,
+										overheated,
+										breathing,
+										faceDown,
+										outOfCrib
+									);
 									/*console.log(
 										"Clicked add",
 										dbBaby,
 										crying,
+										dbLevel,
 										overheated,
 										breathing,
 										faceDown,
