@@ -154,12 +154,7 @@ const FaceUp = props => {
 			<XAxis dataKey="time" />
 			<YAxis />
 			<Tooltip />
-			<Area
-				type="monotone"
-				dataKey="faceup"
-				stroke="#8884d8"
-				fill="#8884d8"
-			/>
+			<Area type="monotone" dataKey="faceup" stroke="#8884d8" fill="#8884d8" />
 		</AreaChart>
 	);
 };

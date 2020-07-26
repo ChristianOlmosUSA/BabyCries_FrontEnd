@@ -7,7 +7,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0 --port 3007",
+		"start": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0 --port 3004",
 		"build": "webpack --config webpack.prod.js",
 		"deploy": "node deploy-to-github.js"
 	},
@@ -79,6 +79,7 @@
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
 		"reactstrap": "^8.4.1",
-		"rechart": "0.0.1"
+		"rechart": "0.0.1",
+		"recharts": "^1.8.5"
 	}
 }

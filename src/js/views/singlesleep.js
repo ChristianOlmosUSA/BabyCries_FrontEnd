@@ -1,16 +1,18 @@
 import React from "react";
-import VolumeChart from "./volumechart";
-import FaceUp from "./faceup";
-import EmotionChart from "./emotionchart";
-import BreathsChart from "./breathschart";
+import VolumeChart from "../component/volumechart";
+import FaceUp from "../component/faceup";
+import EmotionChart from "../component/emotionchart";
+import BreathsChart from "../component/breathschart";
+import "../../styles/singleSleep.scss";
 
-//create your first component
-export function HistoryPage() {
+// API to import data from DB
+
+export function SingleSleep() {
 	let gender = "female";
 	return (
 		<div className={`${gender} container text-center mt`}>
 			<div>
-				<h2>Past Monitor from July 17th </h2>
+				<h3>Sleep Session from July 29th </h3>
 			</div>
 
 			<h3> Face up? </h3>

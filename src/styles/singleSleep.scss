@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
 
-
+.backdrop {
+    background-image: linear-gradient(-90deg, pink, lightblue)
+}
+    
 .inputFields{
  width: 300px;
  height: 60px;
@@ -20,8 +24,17 @@
 
 .passwordConfirm{
     text-shadow: 2px;
-
 }
-.cameraIDnumber{
 
+
+.container{
+    width: 480px;
+    }
+
+.male{
+    color:lightblue;
+}
+
+.female{
+    color:pink;
 }
