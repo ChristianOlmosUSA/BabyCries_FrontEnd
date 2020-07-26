@@ -33,7 +33,7 @@ export const HistoryList = () => {
 	return (
 		<div className="text-center container bg-white text-center">
 			<h3 />
-			<h5>Recall a night?</h5>
+			<h5>check on a past sleep?</h5>
 			{days.map(e => {
 				return (
 					<div key={e} className="history-entry">
