@@ -25,23 +25,9 @@ export const About = () => (
 			</div>
 		</div>
 
-		<div className="p5 mx-auto flex-col p-2">
-			<div className="bullets">Do you want to be alerted if you baby rolls onto their face?</div>
-			<div className="bullets">How about a text message if they stop breathing?</div>
-			<div className="bullets">And help with all the crying...</div>
-			<div className="bullets">Why are they crying? Magic Monitor helps to guess</div>
-		</div>
-
 		<div className="p5 mt-3 flex-col">
 			<div className="">
 				<h2>How Magic Monitor Works</h2>
-			</div>
-			<div className="container homePageLogo">
-				<div className="d-flex flex-row justify-content-around w-50 ml-3">
-					<img className="img-fluid m-3" src={RPi_Logo} />
-					<img className="img-fluid m-3" src={TF_Logo} />
-					<img className="img-fluid m-3" src={OpenCV_Logo} />
-				</div>
 			</div>
 			<div className="p5 mt-3">
 				<div className="">Using artificial intelligence from Google</div>
@@ -51,6 +37,13 @@ export const About = () => (
 				<div className="">explained by reasons such as pain, hunger, diaper change, discomfort</div>
 				<div className="">
 					<small>* no images or sounds are stored by us, and you have complete control over the data</small>
+				</div>
+			</div>
+            <div className="container homePageLogo">
+				<div className="d-flex flex-row justify-content-around w-50 ml-3">
+					<img className="img-fluid m-3" src={RPi_Logo} />
+					<img className="img-fluid m-3" src={TF_Logo} />
+					<img className="img-fluid m-3" src={OpenCV_Logo} />
 				</div>
 			</div>
 		</div>
