@@ -53,7 +53,12 @@ export const CreateNewAccount = () => (
 							Remember Me
 						</div> */}
 						<div className="form-group">
-							<input type="submit" value="Update" className="btn float-right login_btn" />
+							<input
+								type="submit"
+								value="Update"
+								className="btn float-right login_btn"
+								onClick={alert("New accounts are currently not available")}
+							/>
 						</div>
 					</form>
 				</div>
