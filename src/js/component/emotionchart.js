@@ -154,12 +154,7 @@ const EmotionChart = props => {
 			<XAxis dataKey="time" />
 			<YAxis />
 			<Tooltip />
-			<Area
-				type="monotone"
-				dataKey="volume"
-				stroke="#8884d8"
-				fill="#1398b2"
-			/>
+			<Area type="monotone" dataKey="volume" stroke="#8884d8" fill="#1398b2" />
 		</AreaChart>
 	);
 };

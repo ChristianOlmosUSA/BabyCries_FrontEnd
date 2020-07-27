@@ -2,7 +2,13 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import moment from "moment";
 import "../../styles/historyList.scss";
-/*...TO DO:  onClick we need to request the data for said day and open it in historySingleDay  */
+/*...TO DO:  onClick we need to request the data for said day and open it in singlesleep  
+eg
+onClick={() => to="/singlesleep#API_CALL-DATE-TIME"}
+*/
+// John - Can you add your blue/pink background here too? (SingleSleep.scss)
+// Theres also a slight logic error, click the 'previous days' button and sometimes the current week renders twice
+
 let entries = [];
 
 export const HistoryList = () => {
@@ -26,6 +32,8 @@ export const HistoryList = () => {
 
 	return (
 		<div className="text-center container bg-white text-center">
+			<h3 />
+			<h5>check on a past sleep?</h5>
 			{days.map(e => {
 				return (
 					<div key={e} className="history-entry">
@@ -37,7 +45,7 @@ export const HistoryList = () => {
 				type="button"
 				className="history-entry"
 				onClick={() => setEndDate(moment(endDate).subtract(7, "days"))}>
-				more days
+				Previous days
 			</div>
 		</div>
 	);

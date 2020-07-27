@@ -8,7 +8,7 @@ import { Video } from "./views/video";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Settings } from "./views/settings";
-import { HistorySingleDay } from "./views/historySingleDay";
+import { SingleSleep } from "./views/singlesleep";
 import { HistoryList } from "./views/historyList";
 import { CreateNewAccount } from "./views/createNewAccount";
 import { Dashboard } from "./views/dashboard";
@@ -37,7 +37,7 @@ export const Layout = () => {
 						<Route exact path="/admin_alarm" component={AdminAlarm} />
 						<Route path="/video" component={Video} />
 						<Route path="/settings" component={Settings} />
-						<Route path="/historysingleday" component={HistorySingleDay} />
+						<Route path="/singlesleep" component={SingleSleep} />
 						<Route path="/historylist" component={HistoryList} />
 						<Route path="/createnewaccount" component={CreateNewAccount} />
 						<Route path="/single/:theid" component={Single} />

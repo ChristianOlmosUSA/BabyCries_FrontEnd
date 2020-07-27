@@ -154,12 +154,7 @@ const BreathsChart = props => {
 			<XAxis dataKey="time" />
 			<YAxis />
 			<Tooltip />
-			<Area
-				type="monotone"
-				dataKey="breathspm"
-				stroke="#8884d8"
-				fill="#ff0000"
-			/>
+			<Area type="monotone" dataKey="breathspm" stroke="#8884d8" fill="#ff0000" />
 		</AreaChart>
 	);
 };

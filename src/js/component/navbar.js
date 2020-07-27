@@ -21,7 +21,7 @@ export const Navbar = () => {
 					DASHBOARD
 				</Link>
 				<Link className="nav-button" to="/historylist">
-					HISTORY LIST
+					PREVIOUS SLEEPS
 				</Link>
 				<Link className="nav-button" to="/login">
 					LOGIN

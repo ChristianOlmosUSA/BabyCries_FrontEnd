@@ -154,12 +154,7 @@ const VolumeChart = props => {
 			<XAxis dataKey="time" />
 			<YAxis />
 			<Tooltip />
-			<Area
-				type="monotone"
-				dataKey="volume"
-				stroke="#8884d8"
-				fill="#ffdfe5"
-			/>
+			<Area type="monotone" dataKey="volume" stroke="#8884d8" fill="#ffdfe5" />
 		</AreaChart>
 	);
 };
