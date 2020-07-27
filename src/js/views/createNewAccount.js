@@ -57,7 +57,7 @@ export const CreateNewAccount = () => (
 								type="submit"
 								value="Update"
 								className="btn float-right login_btn"
-								onClick={alert("New accounts are currently not available")}
+								onClick={() => alert("New accounts are currently not available")}
 							/>
 						</div>
 					</form>
