@@ -16,7 +16,7 @@ export const Navbar = () => {
 				<Link className="nav-button" to="./">
 					HOME
 				</Link>
-                <Link className="nav-button" to="/about">
+				<Link className="nav-button" to="/about">
 					ABOUT US
 				</Link>
 				{store.token ? (
@@ -57,33 +57,33 @@ export const Navbar = () => {
 					<Link className="nav-button w-100" to="./">
 						HOME
 					</Link>
-                    <Link className="nav-button" to="/about">
-					    ABOUT US
-				    </Link>
-					{store.token ? (
-					<span>
-						<Link className="nav-button" to="/video">
-							LIVE VIDEO
-						</Link>
-						<Link className="nav-button" to="/dashboard">
-							DASHBOARD
-						</Link>
-						<Link className="nav-button" to="/historylist">
-							PREVIOUS SLEEPS
-						</Link>
-					</span>
-				) : (
-					""
-				)}
-					{store.token ? (
-					<Link className="nav-button" to="/login">
-						LOG OUT - NOT IMPLEMENTED
+					<Link className="nav-button" to="/about">
+						ABOUT US
 					</Link>
-				) : (
-					<Link className="nav-button" to="/login">
-						LOGIN
-					</Link>
-				)}
+					{store.token ? (
+						<span>
+							<Link className="nav-button" to="/video">
+								LIVE VIDEO
+							</Link>
+							<Link className="nav-button" to="/dashboard">
+								DASHBOARD
+							</Link>
+							<Link className="nav-button" to="/historylist">
+								PREVIOUS SLEEPS
+							</Link>
+						</span>
+					) : (
+						""
+					)}
+					{store.token ? (
+						<Link className="nav-button" to="/login">
+							LOG OUT - NOT IMPLEMENTED
+						</Link>
+					) : (
+						<Link className="nav-button" to="/login">
+							LOGIN
+						</Link>
+					)}
 				</div>
 			) : (
 				""

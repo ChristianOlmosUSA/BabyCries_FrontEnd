@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import rigoImage from "../../img/rigo-baby.jpg";
 import RPi_Logo from "../../img/RPi-Logo.png";
 import TF_Logo from "../../img/TF-Logo.png";
 import OpenCV_Logo from "../../img/OpenCV-Logo.png";
@@ -39,7 +40,7 @@ export const About = () => (
 					<small>* no images or sounds are stored by us, and you have complete control over the data</small>
 				</div>
 			</div>
-            <div className="container homePageLogo">
+			<div className="container homePageLogo">
 				<div className="d-flex flex-row justify-content-around w-50 ml-3">
 					<img className="img-fluid m-3" src={RPi_Logo} />
 					<img className="img-fluid m-3" src={TF_Logo} />
