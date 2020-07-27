@@ -9,6 +9,12 @@ export const AlarmForm = () => {
 	const { store, actions } = useContext(Context);
 	const [dbBaby, setDBBaby] = useState("DEFAULT");
 	const [crying, setCrying] = useState("NotCrying");
+	const [hungry, setHungry] = useState("");
+	const [tired, setTired] = useState("");
+	const [enough, setEnough] = useState("");
+	const [bored, setBored] = useState("");
+	const [colic, setColic] = useState("");
+	const [sick, setSick] = useState("");
 	const [dbLevel, setDBLevel] = useState("");
 	const [overheated, setOverheated] = useState("false");
 	const [breathing, setBreathing] = useState("");
@@ -58,8 +64,22 @@ export const AlarmForm = () => {
 								<option value="Enough">Enough!</option>
 								<option value="Bored">Im Bored</option>
 								<option value="Colic">Colic</option>
-								<option value="Sick">Im sick</option>
+								<option value="Sick">Im Sick</option>
 							</select>
+						</div>
+						<div className="row align-items-center remember">
+							<input type="checkbox" onChange={e => setHungry(!hungry)} value={hungry ? "checked" : ""} />
+							Hungry
+							<input type="checkbox" onChange={e => setTired(!tired)} value={tired ? "checked" : ""} />
+							Tired
+							<input type="checkbox" onChange={e => setEnough(!enough)} value={enough ? "checked" : ""} />
+							Enough
+							<input type="checkbox" onChange={e => setBored(!bored)} value={bored ? "checked" : ""} />
+							Bored
+							<input type="checkbox" onChange={e => setColic(!colic)} value={colic ? "checked" : ""} />
+							Colic
+							<input type="checkbox" onChange={e => setSick(!sick)} value={sick ? "checked" : ""} />
+							Sick
 						</div>
 						<div className="input-group form-group">
 							<div className="input-group-prepend">
@@ -141,9 +161,21 @@ export const AlarmForm = () => {
 								value="Update"
 								className="btn float-right login_btn"
 								onClick={() => {
+									let tmpHungry = hungry ? 100 : 0;
+									let tmpTired = tired ? 100 : 0;
+									let tmpEnough = enough ? 100 : 0;
+									let tmpBored = bored ? 100 : 0;
+									let tmpColic = colic ? 100 : 0;
+									let tmpSick = sick ? 100 : 0;
 									actions.addAlarm(
 										dbBaby,
 										crying,
+										tmpHungry,
+										tmpTired,
+										tmpEnough,
+										tmpBored,
+										tmpColic,
+										tmpSick,
 										dbLevel,
 										overheated,
 										breathing,

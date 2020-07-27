@@ -19,7 +19,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			setStore: setStore,
-			addAlarm: (dbBaby, crying, dbLevel, overheated, breathing, faceDown, outOfCrib) => {
+			addAlarm: (
+				dbBaby,
+				crying,
+				tmpHungry,
+				tmpTired,
+				tmpEnough,
+				tmpBored,
+				tmpColic,
+				tmpSick,
+				dbLevel,
+				overheated,
+				breathing,
+				faceDown,
+				outOfCrib
+			) => {
 				//console.log(dbBaby, crying, overheated, breathing, faceDown, outOfCrib);
 
 				overheated == "True" ? (overheated = true) : (overheated = false);
@@ -32,6 +46,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const data = {
 						baby_id: dbBaby,
 						crying: crying,
+						hungry: tmpHungry,
+						tired: tmpTired,
+						enough: tmpEnough,
+						bored: tmpBored,
+						colic: tmpColic,
+						sick: tmpSick,
 						decibel_level: parseInt(dbLevel),
 						overheated: overheated,
 						breathing: parseInt(breathing),
