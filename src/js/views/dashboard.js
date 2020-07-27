@@ -7,10 +7,12 @@ import { BabyForm } from "../component/babyForm";
 import { AlarmForm } from "../component/alarmForm";
 import moment from "moment";
 import "../../styles/home.scss";
+import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
 
 export const Dashboard = () => {
 	const { actions, store } = useContext(Context);
 	const [babyState, setBabies] = useState("empty");
+	let data = [];
 
 	useEffect(
 		() => {
@@ -20,7 +22,7 @@ export const Dashboard = () => {
 	);
 
 	return (
-		<div className="text-center backdrop w-100">
+		<div className="text-center backdrop container-fluid">
 			{store.token ? (
 				<div className="d-flex flex-column bd-highlight mb-3">
 					{store.user_info.msg == "Token has expired" ? ((store.token = null), <Redirect to="/login" />) : ""}
@@ -46,8 +48,78 @@ export const Dashboard = () => {
 											<div>Active : {item.is_active ? "True" : "False"}</div>
 											<div>
 												{item.alarms.map(alarm => {
-													return <div key={alarm.id}>{alarm.created_date}</div>;
+													return (
+														<div key={alarm.id}>
+															ID ={alarm.id} Time = {alarm.created_date}
+														</div>
+													);
 												})}
+												{
+													<div className="container d-flex flex-column text-left m-3">
+														<div className="p-2">Breathing and Decible Level</div>
+														<AreaChart
+															width={300}
+															height={100}
+															data={item.alarms}
+															layout="horizontal"
+															verticalAlign="top"
+															align="center"
+															margin={{
+																top: 0,
+																right: 0,
+																left: -60,
+																bottom: 0
+															}}>
+															<XAxis dataKey="created_date" />
+															<YAxis dataKey="breathing" />
+															<Tooltip />
+															<Legend />
+															<Area
+																type="monotone"
+																dataKey="breathing"
+																stroke="#8884d8"
+																fill="#8884d8"
+															/>
+															<Area
+																type="monotone"
+																dataKey="decibel_level"
+																stroke="#82ca9d"
+																fill="#82ca9d"
+															/>
+														</AreaChart>
+														<div className="p-2">Reasons for crying</div>
+														<AreaChart
+															width={300}
+															height={100}
+															data={item.alarms}
+															layout="horizontal"
+															verticalAlign="top"
+															align="center"
+															margin={{
+																top: 0,
+																right: 0,
+																left: -60,
+																bottom: 0
+															}}>
+															<XAxis dataKey="created_date" />
+															<YAxis dataKey="breathing" />
+															<Tooltip />
+															<Legend />
+															<Area
+																type="monotone"
+																dataKey="breathing"
+																stroke="#8884d8"
+																fill="#8884d8"
+															/>
+															<Area
+																type="monotone"
+																dataKey="decibel_level"
+																stroke="#82ca9d"
+																fill="#82ca9d"
+															/>
+														</AreaChart>
+													</div>
+												}
 											</div>
 											<div
 												className="btn btn-danger"

@@ -8,10 +8,10 @@ function myFunc(arg) {
 export const AlarmForm = () => {
 	const { store, actions } = useContext(Context);
 	const [dbBaby, setDBBaby] = useState("DEFAULT");
-	const [crying, setCrying] = useState("");
-	const [dbLevel, setDBLevel] = useState(0);
+	const [crying, setCrying] = useState("NotCrying");
+	const [dbLevel, setDBLevel] = useState("");
 	const [overheated, setOverheated] = useState("false");
-	const [breathing, setBreathing] = useState(0);
+	const [breathing, setBreathing] = useState("");
 	const [faceDown, setFaceDown] = useState("false");
 	const [outOfCrib, setOutOfCrib] = useState("false");
 
@@ -48,15 +48,18 @@ export const AlarmForm = () => {
 									<i className="fas fa-user" />
 								</span>
 							</div>
-							<input
-								type="text"
-								className="form-control"
-								placeholder="Reason for Alarm"
-								value={crying}
-								onChange={e => {
-									setCrying(e.target.value);
-								}}
-							/>
+							<select
+								className="custom-select"
+								value={overheated}
+								onChange={e => setCrying(e.target.value)}>
+								<option value="NotCrying">Not Crying</option>
+								<option value="Hungry">Im Hungry</option>
+								<option value="Tired">Im Tired</option>
+								<option value="Enough">Enough!</option>
+								<option value="Bored">Im Bored</option>
+								<option value="Colic">Colic</option>
+								<option value="Sick">Im sick</option>
+							</select>
 						</div>
 						<div className="input-group form-group">
 							<div className="input-group-prepend">
