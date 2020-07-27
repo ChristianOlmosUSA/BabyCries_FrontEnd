@@ -60,7 +60,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						is_active: true
 					};
 					console.log(data);
-					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/alarm", {
+					fetch(process.env.API_HOST + "/alarm", {
 						method: "POST", // or 'PUT'
 						headers: {
 							"Content-Type": "application/json",
@@ -89,7 +89,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					//console.log(store.user_info.username);
 					//console.log("token found, token = " + store.token);
 					let data = null;
-					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/user", {
+					fetch(process.env.API_HOST + "/user", {
 						method: "GET", // or 'PUT'
 						headers: {
 							"Content-Type": "application/json",
@@ -124,7 +124,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						time_zone: timeZone,
 						baby_gender: gender
 					};
-					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/babies", {
+					fetch(process.env.API_HOST + "/babies", {
 						method: "POST", // or 'PUT'
 						headers: {
 							"Content-Type": "application/json",
@@ -155,7 +155,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const data = {
 						baby_id: babyID
 					};
-					fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/babies", {
+					fetch(process.env.API_HOST + "/babies", {
 						method: "DELETE", // or 'PUT'
 						headers: {
 							"Content-Type": "application/json",
@@ -181,7 +181,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					password: password
 				};
 
-				fetch("https://3000-a9b34f79-7131-40c9-8e4b-eb888a4a9dca.ws-us02.gitpod.io/login", {
+				fetch(process.env.API_HOST + "/login", {
 					method: "POST", // or 'PUT'
 					headers: {
 						"Content-Type": "application/json"
