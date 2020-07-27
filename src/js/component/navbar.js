@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+	const { actions, store } = useContext(Context);
 	const [dropDown, setDropDown] = useState(false);
 	const toggleUpOrDrop = () => setDropDown(!dropDown);
 	const [babyName, setBabyName] = useState("Magic Monitor");
@@ -14,18 +16,30 @@ export const Navbar = () => {
 				<Link className="nav-button" to="./">
 					HOME
 				</Link>
-				<Link className="nav-button" to="/video">
-					LIVE VIDEO
-				</Link>
-				<Link className="nav-button" to="/dashboard">
-					DASHBOARD
-				</Link>
-				<Link className="nav-button" to="/historylist">
-					PREVIOUS SLEEPS
-				</Link>
-				<Link className="nav-button" to="/login">
-					LOGIN
-				</Link>
+				{store.token ? (
+					<span>
+						<Link className="nav-button" to="/video">
+							LIVE VIDEO
+						</Link>
+						<Link className="nav-button" to="/dashboard">
+							DASHBOARD
+						</Link>
+						<Link className="nav-button" to="/historylist">
+							PREVIOUS SLEEPS
+						</Link>
+					</span>
+				) : (
+					""
+				)}
+				{store.token ? (
+					<Link className="nav-button" to="/login">
+						LOG OUT - NOT IMPLEMENTED
+					</Link>
+				) : (
+					<Link className="nav-button" to="/login">
+						LOGIN
+					</Link>
+				)}
 			</div>
 			<div
 				type="button"
