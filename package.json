@@ -79,6 +79,7 @@
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
 		"reactstrap": "^8.4.1",
-		"rechart": "0.0.1"
+		"rechart": "0.0.1",
+		"recharts": "^1.8.5"
 	}
 }
