@@ -8,11 +8,11 @@ export const Video = () => (
 		<h1>Live Video Here!</h1>
 		<dir className="m-5">
 			<Iframe
-				url="http://192.168.1.76/stream.mjpg"
+				url="http://a8c43d92eba3.ngrok.io/stream.mjpg"
 				// url="https://www.youtube.com/embed?v=5ECD8J3dvDQ"
 				width="640px"
 				height="480px"
-				id="ImpossibleStringIDkaybvkurycbucvehcbkewucxyrfewqxctv26427f6gx"
+				id="Impossible_String_ID_kaybvkurycbucvehcbkewucxyrfewqxctv26427f6gx"
 				className="theLiveVideo"
 				display="initial"
 				position="relative"
