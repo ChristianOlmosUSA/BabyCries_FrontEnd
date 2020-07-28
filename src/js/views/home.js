@@ -59,8 +59,8 @@ export const Home = () => (
 					Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera
 					only product.​
 				</div>
-				<div className="m-3 px-4 py-2 container-fluid d-flex flex-row justify-content-around">
-					<div className="row">
+				<div className="m-3 px-4 py-2 container-fluid">
+					<div className="d-flex flex-row">
 						<span className="m-2 p-2 col-3">
 							<i className="fas fa-video fa-4x" />
 							<div>
