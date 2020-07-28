@@ -36,7 +36,7 @@ export const About = () => (
 				<div className="">As with any standard baby monitor there is a live streaming video page. The security of this is important – each monitor would arrive with a unique 32 digit key used for the first sign-up linking to a unique subdomain, on top of the JWT secure login. No video is saved (But a future option might be a play-back)</div>
 			</div>
 			<div className="container-fluid homePageLogo">
-				<div className="d-flex flex-row">
+				<div className="d-flex flex-row justify-content-around">
 					<img className="img-fluid p-3" src={RPi_Logo} />
 					<img className="img-fluid p-3" src={TF_Logo} />
 					<img className="img-fluid p-3" src={OpenCV_Logo} />
