@@ -26,8 +26,8 @@ export const About = () => (
 				<h2>Magic Monitor: <i>The Product</i></h2>
 			</div>
 			<div className="p-3 m-5 mt-3">
-				<div className="">Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera only product.​</div>
-				<ol>
+				<div className="m-2">Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera only product.​</div>
+				<ol className="m-5 p-2">
                     <li className="">Detects whether the baby is face up or face down. Most international guidelines suggest young babies are kept face up​ to prevent SIDS.</li>
                     <li className="">Identifies the breathing rate of the baby. The user gets default variables, and can also adjust these or disable the alert. But the great thing about these two functions is getting an alert to your phone by text message telling you if your baby has very rapid or slow breathing or has rolled onto their face​</li>
                     <li className="">Cry Interpretation. Using an opensource database of 715 cries which have been categorized, we can also respond to the noise of crying whether it is ‘hunger’, ‘sleepiness’, ’boredom’, ’colicky’, ’sick’, or ’has had enough’ ​​</li>
