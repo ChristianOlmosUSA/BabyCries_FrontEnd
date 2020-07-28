@@ -102,12 +102,5 @@ export const Home = () => (
 				</div>
 			</div>
 		</div>
-		<div className="container-fluid homePageLogo">
-			<div className="d-flex flex-row justify-content-around">
-				<img className="img-fluid m-2" src={RPi_Logo} />
-				<img className="img-fluid m-2" src={TF_Logo} />
-				<img className="img-fluid m-2" src={OpenCV_Logo} />
-			</div>
-		</div>
 	</div>
 );
