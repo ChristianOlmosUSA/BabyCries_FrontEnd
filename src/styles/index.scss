@@ -6,7 +6,8 @@
         display: none;
     }
     .Hamburger {
-        display: block;
+        display: flex;
+        flex-direction: column;
         background-color: transparent;
         color: black;
         float: right;
