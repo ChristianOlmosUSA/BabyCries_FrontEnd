@@ -60,31 +60,37 @@ export const Home = () => (
 					only product.​
 				</div>
 				<div className="m-3 p-3 container-fluid">
-					<div className="d-flex flex-row container">
-						<span className="m-2 p-2 col-sm-12 col-xs-12">
-							<i className="fas fa-video fa-4x" />
-							<div>
-								Detects whether the baby is face up or face down. Most international guidelines suggest
-								young babies are kept face up​ to prevent SIDS.
-							</div>
-						</span>
-						<span className="m-2 p-2 col-sm-12 col-xs-12">
-							<i className="fas fa-microphone-alt fa-4x" />
-							<div>
-								Identifies the breathing rate of the baby. The user gets default variables, and can also
-								adjust these or disable the alert. But the great thing about these two functions is
-								getting an alert to your phone by text message telling you if your baby has very rapid
-								or slow breathing or has rolled onto their face​
-							</div>
-						</span>
-						<span className="m-2 p-2 col-sm-12 col-xs-12">
-							<i className="fas fa-search fa-4x" />
-							<div>
-								Cry Interpretation. Using an opensource database of 715 cries which have been
-								categorized, we can also respond to the noise of crying whether it is ‘hunger’,
-								‘sleepiness’, ’boredom’, ’colicky’, ’sick’, or ’has had enough’ ​​
-							</div>
-						</span>
+					<div className="d-flex flex-row">
+						<div className="row">
+							<span className="m-2 p-2 col-sm-4 col-xs-12">
+								<i className="fas fa-video fa-4x" />
+								<div>
+									Detects whether the baby is face up or face down. Most international guidelines
+									suggest young babies are kept face up​ to prevent SIDS.
+								</div>
+							</span>
+						</div>
+						<div className="row">
+							<span className="m-2 p-2 col-sm-4 col-xs-12">
+								<i className="fas fa-microphone-alt fa-4x" />
+								<div>
+									Identifies the breathing rate of the baby. The user gets default variables, and can
+									also adjust these or disable the alert. But the great thing about these two
+									functions is getting an alert to your phone by text message telling you if your baby
+									has very rapid or slow breathing or has rolled onto their face​
+								</div>
+							</span>
+						</div>
+						<div className="row">
+							<span className="m-2 p-2 col-sm-4 col-xs-12">
+								<i className="fas fa-search fa-4x" />
+								<div>
+									Cry Interpretation. Using an opensource database of 715 cries which have been
+									categorized, we can also respond to the noise of crying whether it is ‘hunger’,
+									‘sleepiness’, ’boredom’, ’colicky’, ’sick’, or ’has had enough’ ​​
+								</div>
+							</span>
+						</div>
 					</div>
 				</div>
 
