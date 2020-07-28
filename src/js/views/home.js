@@ -60,9 +60,9 @@ export const Home = () => (
 					only product.​
 				</div>
 				<div className="m-3 p-3 container-fluid">
-					<div className="d-flex flex-row">
-						<div className="row">
-							<span className="m-2 p-2 col-4">
+					<div className="d-flex row">
+						<div className="col-4">
+							<span className="m-2 p-2">
 								<i className="fas fa-video fa-4x" />
 								<div>
 									Detects whether the baby is face up or face down. Most international guidelines
@@ -70,8 +70,8 @@ export const Home = () => (
 								</div>
 							</span>
 						</div>
-						<div className="row">
-							<span className="m-2 p-2 col-4">
+						<div className="col-4">
+							<span className="m-2 p-2">
 								<i className="fas fa-microphone-alt fa-4x" />
 								<div>
 									Identifies the breathing rate of the baby. The user gets default variables, and can
@@ -81,8 +81,8 @@ export const Home = () => (
 								</div>
 							</span>
 						</div>
-						<div className="row">
-							<span className="m-2 p-2 col-4">
+						<div className="col-4">
+							<span className="m-2 p-2">
 								<i className="fas fa-search fa-4x" />
 								<div>
 									Cry Interpretation. Using an opensource database of 715 cries which have been
