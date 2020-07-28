@@ -58,7 +58,7 @@ export const About = () => (
 				</div>
 			</div>
 			<div className="container-fluid homePageLogo">
-				<div className="d-flex flex-row justify-content-around" style={{ maxHeight: "20rem" }}>
+				<div className="d-flex flex-row justify-content-around" style={{ maxHeight: "10rem" }}>
 					<img className="img-fluid m-2" src={RPi_Logo} />
 					<img className="img-fluid m-2" src={TF_Logo} />
 					<img className="img-fluid m-2" src={OpenCV_Logo} />
