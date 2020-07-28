@@ -21,13 +21,13 @@ export const About = () => (
 			</div>
 		</div>
 
-		<div className="p-3 mt-3 flex-col container-fluid">
+		<div className="mt-3 flex-col container-fluid">
 			<div className="">
 				<h2>
 					Magic Monitor: <i>The Product</i>
 				</h2>
 			</div>
-			<div className="p-3 m-5 mt-3">
+			<div className="p-3 mt-3">
 				<div className="m-2">
 					Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera
 					only product.​
@@ -58,7 +58,7 @@ export const About = () => (
 				</div>
 			</div>
 			<div className="container-fluid homePageLogo">
-				<div className="d-flex flex-row justify-content-around">
+				<div className="d-flex flex-row justify-content-around" style={{ maxHeight: "20rem" }}>
 					<img className="img-fluid m-2" src={RPi_Logo} />
 					<img className="img-fluid m-2" src={TF_Logo} />
 					<img className="img-fluid m-2" src={OpenCV_Logo} />
