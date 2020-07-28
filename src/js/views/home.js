@@ -61,7 +61,7 @@ export const Home = () => (
 				</div>
 				<ol className="m-3 px-4 py-2">
 					<span className="m-1 p-1">
-						<i class="fas fa-video fa-4x" />
+						<i className="fas fa-video fa-4x" />
 						Detects whether the baby is face up or face down. Most international guidelines suggest young
 						babies are kept face up​ to prevent SIDS.
 					</span>
