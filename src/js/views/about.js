@@ -37,9 +37,9 @@ export const About = () => (
 			</div>
 			<div className="container-fluid homePageLogo">
 				<div className="d-flex flex-row container-fluid">
-					<img className="img-fluid m-3" src={RPi_Logo} />
-					<img className="img-fluid m-3" src={TF_Logo} />
-					<img className="img-fluid m-3" src={OpenCV_Logo} />
+					<img className="img-fluid p-3 w-25" src={RPi_Logo} />
+					<img className="img-fluid p-3 w-25" src={TF_Logo} />
+					<img className="img-fluid p-3 w-25" src={OpenCV_Logo} />
 				</div>
 			</div>
 		</div>
