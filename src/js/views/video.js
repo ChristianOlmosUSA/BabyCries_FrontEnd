@@ -8,7 +8,7 @@ export const Video = () => (
 		<h1>Live Video Here!</h1>
 		<dir className="m-5">
 			<Iframe
-				url="http://a8c43d92eba3.ngrok.io/stream.mjpg"
+				url="http://e53a7278f764.ngrok.io"
 				// url="https://www.youtube.com/embed?v=5ECD8J3dvDQ"
 				width="640px"
 				height="480px"

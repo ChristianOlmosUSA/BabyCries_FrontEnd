@@ -54,13 +54,13 @@ export const Home = () => (
 					Magic Monitor: <i>The Product</i>
 				</h2>
 			</div>
-			<div className="p-3 m-5 mt-3">
+			<div className="p-3 mt-3">
 				<div className="m-2">
 					Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera
 					only product.​
 				</div>
 				<div className="m-3 p-3 container-fluid">
-					<div className="d-flex row flex-xs-wrap flex-sm-nowrap">
+					<div className="d-flex flex-row flex-xs-wrap flex-sm-nowrap">
 						<div className="col-4">
 							<span className="m-2 p-2">
 								<i className="fas fa-video fa-4x" />
