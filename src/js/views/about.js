@@ -8,7 +8,7 @@ import "../../styles/home.scss";
 
 export const About = () => (
 	<div className="text-center backdrop containter-fluid pb-4">
-		<div className="p5 mx-auto flex-col">
+		<div className="p-5 mx-auto flex-col">
 			<div className="p-3">
 				<div className="d-flex flex-wrap row">
 					<div className="w-100 mx-auto m-2 h2 col flex-wrap">
@@ -21,11 +21,11 @@ export const About = () => (
 			</div>
 		</div>
 
-		<div className="p5 mt-3 flex-col">
+		<div className="p-5 mt-3 flex-col">
 			<div className="">
 				<h2>Magic Monitor: <i>The Product</i></h2>
 			</div>
-			<div className="p5 mt-3">
+			<div className="p-5 mt-3 container">
 				<div className="">Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera only product.​</div>
 				<ol>
                     <li className="">Detects whether the baby is face up or face down. Most international guidelines suggest young babies are kept face up​ to prevent SIDS.</li>
