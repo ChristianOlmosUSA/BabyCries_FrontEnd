@@ -59,7 +59,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						out_of_crib: outOfCrib,
 						is_active: true
 					};
-					console.log(data);
+					//console.log(data);
 					fetch(process.env.API_HOST + "/alarm", {
 						method: "POST", // or 'PUT'
 						headers: {
@@ -70,14 +70,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 						.then(response => response.json())
 						.then(data => {
-							console.log("Success from addAlarm: ", data);
+							//console.log("Success from addAlarm: ", data);
 							setStore({
 								babies: [...store.babies.alarms, data]
 							});
-							console.log("setStore from addAlarm results: ", store.babies.alarms);
+							//console.log("setStore from addAlarm results: ", store.babies.alarms);
 						})
 						.catch(error => {
-							console.error("Error:", error);
+							//console.error("Error:", error);
 						});
 				} else {
 					//console.log("token not found token = " + store.token);

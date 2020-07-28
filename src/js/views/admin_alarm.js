@@ -37,7 +37,7 @@ export const AdminAlarm = () => {
 			if (isActive) {
 				interval = setInterval(() => {
 					setSeconds(seconds => seconds + 1);
-					console.log("1 sec");
+					//console.log("1 sec");
 				}, 1000);
 			} else if (!isActive && seconds !== 0) {
 				clearInterval(interval);
