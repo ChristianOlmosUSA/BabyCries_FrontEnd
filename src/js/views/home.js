@@ -48,14 +48,14 @@ export const Home = () => (
 				</div>
 			</div>
 		</div>
-		<div className="p-3 mt-3 flex-col container-fluid">
-			<div className="">
-				<h2>
+		<div className="p-1 mt-3 flex-col container-fluid">
+			<div className="container-wrap d-inline-flex">
+				<h2 className="">
 					Magic Monitor: <i>The Product</i>
 				</h2>
 			</div>
-			<div className="p-3 mt-3">
-				<div className="m-2">
+			<div className="m-2 mt-3">
+				<div className="m-2 container  d-inline-flex">
 					Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera
 					only product.​
 				</div>
@@ -93,7 +93,7 @@ export const Home = () => (
 				</div>
 			</div>
 
-			<div className="">
+			<div className="container">
 				As with any standard baby monitor there is a live streaming video page. The security of this is
 				important – each monitor would arrive with a unique 32 digit key used for the first sign-up linking to a
 				unique subdomain, on top of the JWT secure login. No video is saved (But a future option might be a
