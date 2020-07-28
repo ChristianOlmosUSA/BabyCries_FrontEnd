@@ -61,19 +61,19 @@ export const Home = () => (
 				</div>
 				<ol className="m-3 px-4 py-2">
 					<span className="m-1 p-1">
-						<i className="far fa-video" />
+						<i class="fas fa-video fa-4x" />
 						Detects whether the baby is face up or face down. Most international guidelines suggest young
 						babies are kept face up​ to prevent SIDS.
 					</span>
 					<span className="m-1 p-1">
-						<i className="fas fa-microphone-alt" />
+						<i className="fas fa-microphone-alt fa-4x" />
 						Identifies the breathing rate of the baby. The user gets default variables, and can also adjust
 						these or disable the alert. But the great thing about these two functions is getting an alert to
 						your phone by text message telling you if your baby has very rapid or slow breathing or has
 						rolled onto their face​
 					</span>
 					<span className="m-1 p-1">
-						<i className="fas fa-search" />
+						<i className="fas fa-search fa-4x" />
 						Cry Interpretation. Using an opensource database of 715 cries which have been categorized, we
 						can also respond to the noise of crying whether it is ‘hunger’, ‘sleepiness’, ’boredom’,
 						’colicky’, ’sick’, or ’has had enough’ ​​
