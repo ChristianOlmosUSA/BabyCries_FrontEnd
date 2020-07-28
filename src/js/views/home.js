@@ -60,7 +60,7 @@ export const Home = () => (
 					only product.​
 				</div>
 				<div className="m-3 p-3 container-fluid">
-					<div className="d-flex row">
+					<div className="d-flex row flex-xs-wrap flex-sm-nowrap">
 						<div className="col-4">
 							<span className="m-2 p-2">
 								<i className="fas fa-video fa-4x" />
