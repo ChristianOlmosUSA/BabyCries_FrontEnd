@@ -47,13 +47,13 @@ export const Dashboard = () => {
 											<div>Parent ID : {item.parent_id}</div>
 											<div>Active : {item.is_active ? "True" : "False"}</div>
 											<div>
-												{item.alarms.map(alarm => {
+												{/*item.alarms.map(alarm => {
 													return (
 														<div key={alarm.id}>
 															ID ={alarm.id} Time = {alarm.created_date}
 														</div>
 													);
-												})}
+												})*/}
 
 												<div className="container d-flex flex-column text-left m-3">
 													<div className="p-2">Breathing and Decible Level</div>
@@ -105,7 +105,7 @@ export const Dashboard = () => {
 														}}>
 														<XAxis dataKey="created_date" />
 														<YAxis dataKey="tired" />
-														<Tooltip wrapperStyle={{ top: -140, left: 0 }} />
+														<Tooltip wrapperStyle={{ top: -200, left: 0 }} />
 														<Legend />
 														<Area
 															type="monotone"
