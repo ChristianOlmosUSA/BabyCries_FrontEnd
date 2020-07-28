@@ -21,11 +21,11 @@ export const About = () => (
 			</div>
 		</div>
 
-		<div className="p-3 mt-3 flex-col">
+		<div className="p-3 mt-3 flex-col container-fluid">
 			<div className="">
 				<h2>Magic Monitor: <i>The Product</i></h2>
 			</div>
-			<div className="p-3 mt-3 container">
+			<div className="p-3 mt-3">
 				<div className="">Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera only product.​</div>
 				<ol>
                     <li className="">Detects whether the baby is face up or face down. Most international guidelines suggest young babies are kept face up​ to prevent SIDS.</li>
