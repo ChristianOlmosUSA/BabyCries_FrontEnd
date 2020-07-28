@@ -61,14 +61,14 @@ export const Home = () => (
 				</div>
 				<div className="m-3 p-3 container-fluid">
 					<div className="d-flex flex-row">
-						<span className="m-2 p-2 col-sm-4 col-md-4 col-l-4 col-xl-4">
+						<span className="m-2 p-2 col-md-4 col-sm-12 col-xs-12">
 							<i className="fas fa-video fa-4x" />
 							<div>
 								Detects whether the baby is face up or face down. Most international guidelines suggest
 								young babies are kept face up​ to prevent SIDS.
 							</div>
 						</span>
-						<span className="m-2 p-2 col-sm-4 col-md-4 col-l-4 col-xl-4">
+						<span className="m-2 p-2 col-md-4 col-sm-12 col-xs-12">
 							<i className="fas fa-microphone-alt fa-4x" />
 							<div>
 								Identifies the breathing rate of the baby. The user gets default variables, and can also
@@ -77,7 +77,7 @@ export const Home = () => (
 								or slow breathing or has rolled onto their face​
 							</div>
 						</span>
-						<span className="m-2 p-2 col-sm-4 col-md-4 col-l-4 col-xl-4">
+						<span className="m-2 p-2 col-md-4 col-sm-12 col-xs-12">
 							<i className="fas fa-search fa-4x" />
 							<div>
 								Cry Interpretation. Using an opensource database of 715 cries which have been
