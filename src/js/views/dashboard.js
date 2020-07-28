@@ -40,12 +40,12 @@ export const Dashboard = () => {
 											</div>
 										</div>
 										<div className="card-body">
-											<div>ID : {item.id}</div>
+											{/*<div>ID : {item.id}</div>*/}
 											<div>Gender : {item.baby_gender}</div>
 											<div>DOB : {item.dob_baby}</div>
 											<div>Time Zone : {item.time_zone}</div>
-											<div>Parent ID : {item.parent_id}</div>
-											<div>Active : {item.is_active ? "True" : "False"}</div>
+											{/*<div>Parent ID : {item.parent_id}</div>*/}
+											{/*<div>Active : {item.is_active ? "True" : "False"}</div>*/}
 											<div>
 												{/*item.alarms.map(alarm => {
 													return (
@@ -105,7 +105,6 @@ export const Dashboard = () => {
 														}}>
 														<XAxis dataKey="created_date" />
 														<YAxis dataKey="tired" />
-														<Tooltip wrapperStyle={{ top: -200, left: 0 }} />
 														<Legend />
 														<Area
 															type="monotone"
