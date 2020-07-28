@@ -54,41 +54,73 @@ export const Dashboard = () => {
 														</div>
 													);
 												})}
-												{
-													<div className="container d-flex flex-column text-left m-3">
-														<div className="p-2">Breathing and Decible Level</div>
-														<AreaChart
-															width={300}
-															height={150}
-															data={item.alarms}
-															layout="horizontal"
-															verticalAlign="top"
-															align="center"
-															margin={{
-																top: 0,
-																right: 0,
-																left: -60,
-																bottom: 0
-															}}>
-															<XAxis dataKey="created_date" />
-															<YAxis dataKey="decibel_level" />
-															<Tooltip wrapperStyle={{ top: -140, left: 0 }} />
-															<Legend />
-															<Area
-																type="monotone"
-																dataKey="decibel_level"
-																stroke="#82ca9d"
-																fill="#82ca9d"
-															/>
-															<Area
-																type="monotone"
-																dataKey="breathing"
-																stroke="#8884d8"
-																fill="#8884d8"
-															/>
-														</AreaChart>
-													</div>
-												}
+
+												<div className="container d-flex flex-column text-left m-3">
+													<div className="p-2">Breathing and Decible Level</div>
+													<AreaChart
+														width={300}
+														height={150}
+														data={item.alarms}
+														layout="horizontal"
+														verticalAlign="top"
+														align="center"
+														margin={{
+															top: 0,
+															right: 0,
+															left: -60,
+															bottom: 0
+														}}>
+														<XAxis dataKey="created_date" />
+														<YAxis dataKey="decibel_level" />
+														<Tooltip wrapperStyle={{ top: -140, left: 0 }} />
+														<Legend />
+														<Area
+															type="monotone"
+															dataKey="decibel_level"
+															stroke="#82ca9d"
+															fill="#82ca9d"
+														/>
+														<Area
+															type="monotone"
+															dataKey="breathing"
+															stroke="#8884d8"
+															fill="#8884d8"
+														/>
+													</AreaChart>
+												</div>
+												<div className="container d-flex flex-column text-left m-3">
+													<div className="p-2">Alarms</div>
+													<AreaChart
+														width={300}
+														height={150}
+														data={item.alarms}
+														layout="horizontal"
+														verticalAlign="top"
+														align="center"
+														margin={{
+															top: 0,
+															right: 0,
+															left: -60,
+															bottom: 0
+														}}>
+														<XAxis dataKey="created_date" />
+														<YAxis dataKey="tired" />
+														<Tooltip wrapperStyle={{ top: -140, left: 0 }} />
+														<Legend />
+														<Area
+															type="monotone"
+															dataKey="tired"
+															stroke="#82ca9d"
+															fill="#82ca9d"
+														/>
+														<Area
+															type="monotone"
+															dataKey="hungry"
+															stroke="#8884d8"
+															fill="#8884d8"
+														/>
+													</AreaChart>
+												</div>
 											</div>
 											<div
 												className="btn btn-danger"
