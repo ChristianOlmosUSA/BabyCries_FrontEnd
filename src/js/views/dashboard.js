@@ -110,12 +110,36 @@ export const Dashboard = () => {
 														<Area
 															type="monotone"
 															dataKey="tired"
+															stroke="#3498DB"
+															fill="#3498DB"
+														/>
+														<Area
+															type="monotone"
+															dataKey="hungry"
+															stroke="#FF5733"
+															fill="#FF5733"
+														/>
+														<Area
+															type="monotone"
+															dataKey="enough"
+															stroke="#F7DC6F"
+															fill="#F7DC6F"
+														/>
+														<Area
+															type="monotone"
+															dataKey="bored"
+															stroke="#FCF3CF"
+															fill="#FCF3CF"
+														/>
+														<Area
+															type="monotone"
+															dataKey="colic"
 															stroke="#82ca9d"
 															fill="#82ca9d"
 														/>
 														<Area
 															type="monotone"
-															dataKey="hungry"
+															dataKey="sick"
 															stroke="#8884d8"
 															fill="#8884d8"
 														/>
