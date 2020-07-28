@@ -8,7 +8,7 @@ import "../../styles/home.scss";
 
 export const Home = () => (
 	<div className="text-center backdrop containter-fluid pb-4">
-		<div className="p5 mx-auto flex-col">
+		<div className="mx-auto flex-col">
 			<div className="p-3">
 				<div className="d-flex flex-wrap row">
 					<div className="w-100 mx-auto m-2 h2 col flex-wrap">
@@ -26,18 +26,18 @@ export const Home = () => (
 			</div>
 		</div>
 
-		<div className="p5 mx-auto flex-col p-2">
+		<div className="mx-auto flex-col p-2">
 			<div className="bullets">Do you want to be alerted if you baby rolls onto their face?</div>
 			<div className="bullets">How about a text message if they stop breathing?</div>
 			<div className="bullets">And help with all the crying...</div>
 			<div className="bullets">Why are they crying? Magic Monitor helps to guess</div>
 		</div>
 
-		<div className="p5 mt-3 flex-col">
+		<div className="mt-3 flex-col homeImage">
 			<div className="">
 				<h2>How Magic Monitor Works</h2>
 			</div>
-			<div className="p5 mt-3">
+			<div className="mt-3">
 				<div className="">Using artificial intelligence from Google</div>
 				<div className="">Every breath is counted and timed</div>
 				<div className="">her face position is checked every second</div>
@@ -59,7 +59,7 @@ export const Home = () => (
 					Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera
 					only product.​
 				</div>
-				<ol className="m-3 p-2">
+				<ol className="m-3 px-4 py-2">
 					<li className="m-1 p-1">
 						Detects whether the baby is face up or face down. Most international guidelines suggest young
 						babies are kept face up​ to prevent SIDS.
