@@ -33,7 +33,7 @@ export const Dashboard = () => {
 						{store.babies &&
 							store.babies.map((item, key) => {
 								return (
-									<div key={key} className="m-4 p-2 bd-highlight card h-auto">
+									<div key={key} className="m-4 p-2 bd-highlight bg-light card h-auto">
 										<div className="d-flex flex-row mx-auto">
 											<div>
 												{item.first_name} {item.last_name}
