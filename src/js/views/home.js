@@ -68,6 +68,7 @@ export const Home = () => (
 								young babies are kept face up​ to prevent SIDS.
 							</div>
 						</span>
+						<div class="w-100" />
 						<span className="m-2 p-2 col-4">
 							<i className="fas fa-microphone-alt fa-4x" />
 							<div>
@@ -77,6 +78,7 @@ export const Home = () => (
 								or slow breathing or has rolled onto their face​
 							</div>
 						</span>
+						<div class="w-100" />
 						<span className="m-2 p-2 col-4">
 							<i className="fas fa-search fa-4x" />
 							<div>
