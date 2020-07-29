@@ -29,19 +29,19 @@ export const About = () => (
 			<div className="container card-body" style={{ maxWidth: "24rem" }}>
 				<h3>Chris Olmos</h3>
 				<div className="">
-					<div className="m-2">Economics Degree, 2003</div>
-					<div className="m-2">20 years in banking and business owner​</div>
-					<div className="m-2">Quit work to full time on inventions for the next 2 years​</div>
-					<div className="m-2">Family with 2 children, a boy and girl​</div>
+					<div className="my-2">Economics Degree, 2003</div>
+					<div className="my-2">20 years in banking and business owner​</div>
+					<div className="my-2">Quit work to full time on inventions for the next 2 years​</div>
+					<div className="my-2">Family with 2 children, a boy and girl​</div>
 				</div>
 			</div>
 			<div className="container card-body" style={{ maxWidth: "24rem" }}>
 				<h3>John Rohan</h3>
 				<div className="">
-					<div className="m-2">Self-taught in multiple computer langusges</div>
-					<div className="m-2">15 years of freelance development and consulting​</div>
-					<div className="m-2">4 years of resturant managment in Brikell, Miami​</div>
-					<div className="m-2">Baby on the way</div>
+					<div className="my-2">Self-taught in multiple computer langusges</div>
+					<div className="my-2">15 years of freelance development and consulting​</div>
+					<div className="my-2">4 years of resturant managment in Brikell, Miami​</div>
+					<div className="my-2">Baby on the way</div>
 				</div>
 			</div>
 		</div>
