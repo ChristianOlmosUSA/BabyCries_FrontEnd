@@ -21,48 +21,45 @@ export const About = () => (
 			</div>
 		</div>
 
-		<div className="mt-3 flex-col container-fluid">
-			<div className="">
-				<h2>
-					Magic Monitor: <i>The Product</i>
-				</h2>
-			</div>
-			<div className="p-3 mt-3">
-				<div className="m-2">
-					Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera
-					only product.​
-				</div>
-				<ol className="m-3 p-2">
-					<li className="m-1 p-1">
-						Detects whether the baby is face up or face down. Most international guidelines suggest young
-						babies are kept face up​ to prevent SIDS.
-					</li>
-					<li className="m-1 p-1">
-						Identifies the breathing rate of the baby. The user gets default variables, and can also adjust
-						these or disable the alert. But the great thing about these two functions is getting an alert to
-						your phone by text message telling you if your baby has very rapid or slow breathing or has
-						rolled onto their face​
-					</li>
-					<li className="m-1 p-1">
-						Cry Interpretation. Using an opensource database of 715 cries which have been categorized, we
-						can also respond to the noise of crying whether it is ‘hunger’, ‘sleepiness’, ’boredom’,
-						’colicky’, ’sick’, or ’has had enough’ ​​
-					</li>
-				</ol>
+		<div className="container-fluid">
+			<h1>Meet the Developers</h1>
+		</div>
 
-				<div className="">
-					As with any standard baby monitor there is a live streaming video page. The security of this is
-					important – each monitor would arrive with a unique 32 digit key used for the first sign-up linking
-					to a unique subdomain, on top of the JWT secure login. No video is saved (But a future option might
-					be a play-back)
+		<div className="card-group container-fluid">
+			<div className="container card-body" style={{ maxWidth: "24rem" }}>
+				<h3>Chris Olmos</h3>
+				<div className="p-2">
+					<div className="m-2">Economics Degree, 2003</div>
+					<div className="m-2">20 years in banking and business owner​</div>
+					<div className="m-2">Quit work to full time on inventions for the next 2 years​</div>
+					<div className="m-2">Family with 2 children, a boy and girl​</div>
 				</div>
 			</div>
-			<div className="container-fluid homePageLogo">
-				<div className="d-flex flex-row justify-content-around" style={{ maxHeight: "7rem" }}>
-					<img className="img-fluid m-2" src={RPi_Logo} />
-					<img className="img-fluid m-2" src={TF_Logo} />
-					<img className="img-fluid m-2" src={OpenCV_Logo} />
+			<div className="container card-body" style={{ maxWidth: "24rem" }}>
+				<h3>John Rohan</h3>
+				<div className="p-2">
+					<div className="m-2">Self-taught in multiple computer langusges</div>
+					<div className="m-2">15 years of freelance development and consulting​</div>
+					<div className="m-2">4 years of resturant managment in Brikell, Miami​</div>
+					<div className="m-2">Baby on the way</div>
 				</div>
+			</div>
+		</div>
+
+		<div className="container-fluid p-2">
+			<div>
+				<div className="p-1">Chris and John were brought together by 4GeeksAcadmey in March 2020.</div>
+				<div className="p-1">One day Chris asked during class... </div>
+				<div className="p-1">
+					<q>Can we make a device that will alow us to listen to a babys cries and tell me why?</q>
+				</div>
+				<div className="p-1">And so began our journey...</div>
+
+				<div className="p-1">
+					We have put together a React website that incorperates a Python API and SQL database.
+				</div>
+				<div className="p-1">The Magic Monitor is a Raspberry Pi powered bt TensorFlow and OpenCV.</div>
+				<div className="p-1">We developed the Python AI using Colaboratory.</div>
 			</div>
 		</div>
 	</div>

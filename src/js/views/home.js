@@ -25,7 +25,16 @@ export const Home = () => (
 				</div>
 			</div>
 		</div>
-
+		<div className="mx-auto flex-col p-2">
+			<h1>
+				Know Your Baby&#39;s Wants and Needs at{" "}
+				<u>
+					<i>ANY</i>
+				</u>{" "}
+				Time
+				<i>!</i>
+			</h1>
+		</div>
 		<div className="mx-auto flex-col p-2">
 			<div className="bullets">Do you want to be alerted if you baby rolls onto their face?</div>
 			<div className="bullets">How about a text message if they stop breathing?</div>
