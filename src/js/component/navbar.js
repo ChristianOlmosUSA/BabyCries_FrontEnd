@@ -8,7 +8,9 @@ export const Navbar = () => {
 	const toggleUpOrDrop = () => setDropDown(!dropDown);
 	const [babyName, setBabyName] = useState("Magic Monitor");
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ overflow: "visible" }}>
+		<nav
+			className="navbar navbar-expand-lg navbar-light bg-light navbar-static-top"
+			style={{ overflow: "visible" }}>
 			<Link className="nav-brand" to="./">
 				Magic Monitor
 			</Link>
