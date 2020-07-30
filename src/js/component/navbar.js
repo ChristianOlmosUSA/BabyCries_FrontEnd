@@ -16,6 +16,7 @@ export const Navbar = () => {
 				Magic Monitor
 			</Link>
 			<button
+				href="#"
 				className="navbar-toggler"
 				type="button"
 				data-toggle="collapse"
@@ -26,7 +27,7 @@ export const Navbar = () => {
 				<span className="navbar-toggler-icon" />
 			</button>
 
-			<div className="collapse navbar-collapse" id="navbarSupportedContent" expanded={dropDown}>
+			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
 						<Link className="nav-link" to="./">
