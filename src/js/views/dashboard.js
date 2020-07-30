@@ -23,12 +23,13 @@ export const Dashboard = () => {
 
 	return (
 		<div className="text-center backdrop container-fluid">
+			{store.user_info ? <h1>Welcome {store.user_info.email}</h1> : ""}
 			{store.token ? (
 				<div className="d-flex flex-column bd-highlight mb-3">
 					{store.user_info.msg == "Token has expired" ? ((store.token = null), <Redirect to="/login" />) : ""}
-					<div>User email = {store.user_info.email}</div>
-					<div>User ID = {store.user_info.id}</div>
-					<div>User active = {store.user_info.is_active ? "True" : "False"}</div>
+
+					{/*<div>User ID = {store.user_info.id}</div>
+					<div>User active = {store.user_info.is_active ? "True" : "False"}</div>*/}
 					<div className="d-flex flex-column mx-auto">
 						{store.babies &&
 							store.babies.map((item, key) => {
@@ -174,6 +175,14 @@ export const Dashboard = () => {
 			) : (
 				<Redirect to="/login" />
 			)}
+			<div
+				className="btn btn-danger"
+				type="button"
+				onClick={() => {
+					actions.dbCheck();
+				}}>
+				Run DB Check
+			</div>
 		</div>
 	);
 };

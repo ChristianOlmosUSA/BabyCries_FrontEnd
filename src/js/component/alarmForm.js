@@ -1,10 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 
-function myFunc(arg) {
-	console.log(`arg was => ${arg}`);
-}
-
 export const AlarmForm = () => {
 	const { store, actions } = useContext(Context);
 	const [dbBaby, setDBBaby] = useState("DEFAULT");

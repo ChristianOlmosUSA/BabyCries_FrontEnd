@@ -19,6 +19,40 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			setStore: setStore,
+			dbCheck: () => {
+				let data = {
+					baby_id: 1,
+					crying: 0,
+					hungry: 100,
+					tired: 0,
+					enough: 0,
+					bored: 0,
+					colic: 0,
+					sick: 0,
+					decibel_level: 50,
+					overheated: false,
+					breathing: true,
+					face_down: true,
+					out_of_crib: false,
+					is_active: true
+				};
+				fetch("https://magicmonitor.herokuapp.com/alarm", {
+					method: "POST", // or 'PUT'
+					headers: {
+						"Content-Type": "application/json",
+						Authorization:
+							"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwNzI5MDUsImlhdCI6MTU5NjA2OTMwNSwibmJmIjoxNTk2MDY5MzA1LCJzdWIiOjF9.fOxZT4raZfoB7tY49VukVnZjWF7oNSSG4qau6s6TTi0"
+					},
+					body: JSON.stringify(data)
+				})
+					.then(response => response.json())
+					.then(data => {
+						console.log("Success from addAlarm: ", data);
+					})
+					.catch(error => {
+						console.error("Error:", error);
+					});
+			},
 			addAlarm: (
 				dbBaby,
 				crying,

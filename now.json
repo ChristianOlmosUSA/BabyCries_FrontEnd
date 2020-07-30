@@ -9,7 +9,7 @@
     }
   ],
 "env": {
-    "API_HOST": "@api_host"
+    "API_HOST": "https://magicmonitor.herokuapp.com"
   },
   "routes": [
     {
