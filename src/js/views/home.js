@@ -68,8 +68,8 @@ export const Home = () => (
 					Magic Monitor offers 3 new distinct functions no other baby monitor offers – especially from camera
 					only product.​
 				</div>
-				<div className="card-group container-fluid">
-					<div className="container" style={{ maxWidth: "20rem" }}>
+				<div className="card-group container-fluid p-0">
+					<div className="container p-0" style={{ maxWidth: "20rem" }}>
 						<i className="fas fa-video fa-4x" />
 						<div className="card-body">
 							<p className="card-text">
@@ -78,18 +78,16 @@ export const Home = () => (
 							</p>
 						</div>
 					</div>
-					<div className="container" style={{ maxWidth: "20rem" }}>
+					<div className="container p-0" style={{ maxWidth: "20rem" }}>
 						<i className="fas fa-microphone-alt fa-4x" />
 						<div className="card-body">
 							<p className="card-text">
-								Identifies the breathing rate of the baby. The user gets default variables, and can also
-								adjust these or disable the alert. But the great thing about these two functions is
-								getting an alert to your phone by text message telling you if your baby has very rapid
-								or slow breathing or has rolled onto their face​
+								Identifies the breathing rate of the baby and notifies you if your baby has very rapid
+								or slow breathing
 							</p>
 						</div>
 					</div>
-					<div className="container" style={{ maxWidth: "20rem" }}>
+					<div className="container p-0" style={{ maxWidth: "20rem" }}>
 						<i className="fas fa-search fa-4x" />
 						<div className="card-body">
 							<p className="card-text">
@@ -102,6 +100,10 @@ export const Home = () => (
 				</div>
 			</div>
 
+			<div className="container-fluid">
+				The great thing about our alert system is users can recieve text message notifications and updates about
+				their child.
+			</div>
 			<div className="container-fluid">
 				As with any standard baby monitor there is a live streaming video page. The security of this is
 				important – each monitor would arrive with a unique 32 digit key used for the first sign-up linking to a

@@ -7,6 +7,7 @@ export const Navbar = () => {
 	const [dropDown, setDropDown] = useState(false);
 	const toggleUpOrDrop = () => setDropDown(!dropDown);
 	const [babyName, setBabyName] = useState("Magic Monitor");
+
 	return (
 		<nav
 			className="navbar navbar-expand-lg navbar-light bg-light navbar-static-top"
@@ -25,7 +26,7 @@ export const Navbar = () => {
 				<span className="navbar-toggler-icon" />
 			</button>
 
-			<div className="collapse navbar-collapse" id="navbarSupportedContent">
+			<div className="collapse navbar-collapse" id="navbarSupportedContent" expanded={dropDown}>
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
 						<Link className="nav-link" to="./">
@@ -60,8 +61,17 @@ export const Navbar = () => {
 					)}
 					{store.token ? (
 						<li>
-							<Link className="nav-link" to="/login">
-								LOG OUT - NOT IMPLEMENTED
+							<Link
+								className="nav-link"
+								to="/"
+								onClick={() => {
+									store.token = null;
+									store.user_info = null;
+									store.babies = null;
+
+									window.localStorage.clear();
+								}}>
+								LOG OUT
 							</Link>
 						</li>
 					) : (

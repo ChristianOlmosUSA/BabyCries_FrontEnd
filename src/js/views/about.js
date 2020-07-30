@@ -27,23 +27,24 @@ export const About = () => (
 			<h1>Meet the Developers</h1>
 		</div>
 
-		<div className="card-group container-fluid">
-			<div className="container card-body mx-auto" style={{ maxWidth: "20rem" }}>
+		<div className="card-group container-fluid p-0">
+			<div className="container card-body mx-auto px-2" style={{ maxWidth: "20rem" }}>
 				<h3>Chris Olmos</h3>
 				<img className="img-fluid" src={ChrisO} style={{ maxWidth: "13rem" }} />
 				<div className="">
 					<div className="my-2">Economics Degree, 2003</div>
 					<div className="my-2">20 years in banking and business owner​</div>
 					<div className="my-2">Quit work to full time on inventions for the next 2 years​</div>
-					<div className="my-2">Family with 2 children, a boy and girl​</div>
+					<div className="my-2">Family with 2 children,</div>
+					<div className="my-2">a boy and girl​</div>
 				</div>
 			</div>
-			<div className="container card-body mx-auto" style={{ maxWidth: "20rem" }}>
+			<div className="container card-body mx-auto px-2" style={{ maxWidth: "20rem" }}>
 				<h3>John Rohan</h3>
 				<img className="img-fluid" src={JohnR} style={{ maxWidth: "13rem" }} />
 				<div className="">
-					<div className="my-2">Self-taught in multiple computer langusges</div>
 					<div className="my-2">15 years of freelance development and consulting​</div>
+					<div className="my-2">Self-taught in multiple computer languages</div>
 					<div className="my-2">4 years of resturant managment in Brikell, Miami​</div>
 					<div className="my-2">Baby on the way</div>
 				</div>
