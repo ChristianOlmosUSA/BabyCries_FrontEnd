@@ -17,7 +17,8 @@ export const Navbar = () => {
 			</Link>
 			<button
 				href="#"
-				className="navbar-toggler"
+				onClick={() => toggleUpOrDrop()}
+				className={"navbar-toggler"}
 				type="button"
 				data-toggle="collapse"
 				data-target="#navbarSupportedContent"
@@ -27,32 +28,32 @@ export const Navbar = () => {
 				<span className="navbar-toggler-icon" />
 			</button>
 
-			<div className="collapse navbar-collapse" id="navbarSupportedContent">
+			<div className={"collapse navbar-collapse" + (dropDown ? " collapse" : "")} id="navbarSupportedContent">
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item">
-						<Link className="nav-link" to="./">
+						<Link className="nav-link" to="./" onClick={() => toggleUpOrDrop()}>
 							HOME
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link" to="/about">
+						<Link className="nav-link" to="/about" onClick={() => toggleUpOrDrop()}>
 							ABOUT US
 						</Link>
 					</li>
 					{store.token ? (
 						<>
 							<li>
-								<Link className="nav-link" to="/video">
+								<Link className="nav-link" to="/video" onClick={() => toggleUpOrDrop()}>
 									LIVE VIDEO
 								</Link>
 							</li>
 							<li>
-								<Link className="nav-link" to="/dashboard">
+								<Link className="nav-link" to="/dashboard" onClick={() => toggleUpOrDrop()}>
 									DASHBOARD
 								</Link>
 							</li>
 							<li>
-								<Link className="nav-link" to="/historylist">
+								<Link className="nav-link" to="/historylist" onClick={() => toggleUpOrDrop()}>
 									PREVIOUS SLEEPS
 								</Link>
 							</li>
@@ -69,7 +70,7 @@ export const Navbar = () => {
 									store.token = null;
 									store.user_info = null;
 									store.babies = null;
-
+									toggleUpOrDrop();
 									window.localStorage.clear();
 								}}>
 								LOG OUT
@@ -77,7 +78,7 @@ export const Navbar = () => {
 						</li>
 					) : (
 						<li>
-							<Link className="nav-link" to="/login">
+							<Link className="nav-link" to="/login" onClick={() => toggleUpOrDrop()}>
 								LOGIN
 							</Link>
 						</li>
