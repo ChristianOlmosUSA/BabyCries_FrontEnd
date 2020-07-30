@@ -72,22 +72,20 @@ export const HistoryList = () => {
 												//console.log(curDays, d.getUTCDate());
 												return (
 													<div key={alarm.id} onClick={() => (selectedDay = d.getDate())}>
-														ID ={alarm.id} Date = {d.getUTCDate()}
 														<Link className="nav-brand" to="./historylist">
-															Select this day
+															Date = {d.getDate()}/{d.getMonth()}/{d.getFullYear()}
 														</Link>
 													</div>
 												);
 											}
 											if (curDays !== d.getDate()) {
 												//console.log("curdays !== d.setdate");
-												console.log(curDays, d.getUTCDate());
+												//console.log(curDays, d.getUTCDate());
 												curDays = d.getDate();
 												return (
 													<div key={alarm.id} onClick={() => (selectedDay = d.getDate())}>
-														ID ={alarm.id} Date = {d.getUTCDate()}
 														<Link className="nav-brand" to="./historylist">
-															Select this day
+															Date = {d.getDate()}/{d.getMonth()}/{d.getFullYear()}
 														</Link>
 													</div>
 												);
