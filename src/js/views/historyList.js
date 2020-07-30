@@ -100,7 +100,7 @@ export const HistoryList = () => {
 					{data.length ? (
 						<>
 							<div className="container d-flex flex-column text-left m-3">
-								<div className="p-2">Breathing and Decible Level</div>
+								<div className="p-2">Breathing and Decibel Level</div>
 								<AreaChart
 									width={300}
 									height={150}

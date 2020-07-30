@@ -56,15 +56,15 @@ export const About = () => (
 				<div className="p-1">Chris and John were brought together by 4GeeksAcadmey in March 2020.</div>
 				<div className="p-1">One day Chris asked during class... </div>
 				<div className="p-1">
-					<q>Can we make a device that will alow us to listen to a babys cries and tell me why?</q>
+					<q>Can we make a device that will alow us to listen to a baby&#39;s cries and tell me why?</q>
 				</div>
 				<div className="p-1">And so began our journey...</div>
 
 				<div className="p-1">
-					We have put together a React website that incorperates a Python API and SQL database.
+					We have put together a React website that incorporates a Python API and SQL database.
 				</div>
-				<div className="p-1">The Magic Monitor is a Raspberry Pi powered bt TensorFlow and OpenCV.</div>
-				<div className="p-1">We developed the Python AI using Colaboratory.</div>
+				<div className="p-1">The Magic Monitor is a Raspberry Pi powered by TensorFlow and OpenCV.</div>
+				<div className="p-1">We developed the Python AI using Googel Colaboratory.</div>
 			</div>
 		</div>
 	</div>
