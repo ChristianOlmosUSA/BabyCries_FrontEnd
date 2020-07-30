@@ -4,6 +4,8 @@ import RPi_Logo from "../../img/RPi-Logo.png";
 import TF_Logo from "../../img/TF-Logo.png";
 import OpenCV_Logo from "../../img/OpenCV-Logo.png";
 import MagicMonitor_Logo from "../../img/MagicMonitor-Logo.png";
+import JohnR from "../../img/JohnR.png";
+import ChrisO from "../../img/ChrisO.jpeg";
 import "../../styles/home.scss";
 
 export const About = () => (
@@ -26,8 +28,9 @@ export const About = () => (
 		</div>
 
 		<div className="card-group container-fluid">
-			<div className="container card-body" style={{ maxWidth: "24rem" }}>
+			<div className="container card-body mx-auto" style={{ maxWidth: "20rem" }}>
 				<h3>Chris Olmos</h3>
+				<img className="img-fluid" src={ChrisO} style={{ maxWidth: "13rem" }} />
 				<div className="">
 					<div className="my-2">Economics Degree, 2003</div>
 					<div className="my-2">20 years in banking and business owner​</div>
@@ -35,8 +38,9 @@ export const About = () => (
 					<div className="my-2">Family with 2 children, a boy and girl​</div>
 				</div>
 			</div>
-			<div className="container card-body" style={{ maxWidth: "24rem" }}>
+			<div className="container card-body mx-auto" style={{ maxWidth: "20rem" }}>
 				<h3>John Rohan</h3>
+				<img className="img-fluid" src={JohnR} style={{ maxWidth: "13rem" }} />
 				<div className="">
 					<div className="my-2">Self-taught in multiple computer langusges</div>
 					<div className="my-2">15 years of freelance development and consulting​</div>
