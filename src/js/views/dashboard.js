@@ -170,7 +170,7 @@ export const Dashboard = () => {
 							})}
 					</div>
 					<BabyForm style={{ maxWidth: "20rem" }} />
-					{/*<AlarmForm />*/}
+					{<AlarmForm />}
 				</div>
 			) : (
 				<Redirect to="/login" />
