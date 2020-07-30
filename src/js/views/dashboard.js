@@ -175,14 +175,14 @@ export const Dashboard = () => {
 			) : (
 				<Redirect to="/login" />
 			)}
-			<div
+			{/*<div
 				className="btn btn-danger"
 				type="button"
 				onClick={() => {
 					actions.dbCheck();
 				}}>
 				Run DB Check
-			</div>
+			</div>*/}
 		</div>
 	);
 };

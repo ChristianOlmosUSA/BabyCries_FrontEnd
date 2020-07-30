@@ -81,6 +81,8 @@ export const HistoryList = () => {
 											}
 											if (curDays !== d.getDate()) {
 												//console.log("curdays !== d.setdate");
+												console.log(curDays, d.getUTCDate());
+												curDays = d.getDate();
 												return (
 													<div key={alarm.id} onClick={() => (selectedDay = d.getDate())}>
 														ID ={alarm.id} Date = {d.getUTCDate()}
