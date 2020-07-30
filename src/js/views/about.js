@@ -45,7 +45,7 @@ export const About = () => (
 				<div className="">
 					<div className="my-2">15 years of freelance development and consulting​</div>
 					<div className="my-2">Self-taught in multiple computer languages</div>
-					<div className="my-2">4 years of resturant managment in Brikell, Miami​</div>
+					<div className="my-2">4 years of resturant managment in Brickell, Miami​</div>
 					<div className="my-2">Baby on the way</div>
 				</div>
 			</div>

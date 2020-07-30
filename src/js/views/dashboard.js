@@ -36,14 +36,14 @@ export const Dashboard = () => {
 								return (
 									<div key={key} className="m-4 p-2 bd-highlight bg-light card h-auto">
 										<div className="d-flex flex-row mx-auto">
-											<div>
-												{item.first_name} {item.last_name}
-											</div>
+											<h2>
+												Baby : {item.first_name} {item.last_name}
+											</h2>
 										</div>
 										<div className="card-body">
 											{/*<div>ID : {item.id}</div>*/}
 											<div>Gender : {item.baby_gender}</div>
-											<div>DOB : {item.dob_baby}</div>
+											<div>Date Of Birth : {item.dob_baby}</div>
 											<div>Time Zone : {item.time_zone}</div>
 											{/*<div>Parent ID : {item.parent_id}</div>*/}
 											{/*<div>Active : {item.is_active ? "True" : "False"}</div>*/}
@@ -169,8 +169,8 @@ export const Dashboard = () => {
 								);
 							})}
 					</div>
-					<BabyForm />
-					<AlarmForm />
+					<BabyForm style={{ maxWidth: "20rem" }} />
+					{/*<AlarmForm />*/}
 				</div>
 			) : (
 				<Redirect to="/login" />
