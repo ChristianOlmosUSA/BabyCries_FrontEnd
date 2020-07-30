@@ -91,7 +91,7 @@ export const Home = () => (
 						<i className="fas fa-search fa-4x" />
 						<div className="card-body">
 							<p className="card-text">
-								Cry Interpretation. Using an opensource database of 715 cries which have been
+								Cry Interpretation. Using an opensource database of 700 cries which have been
 								categorized, we can also respond to the noise of crying whether it is ‘hunger’,
 								‘sleepiness’, ’boredom’, ’colicky’, ’sick’, or ’has had enough’ ​​
 							</p>
